@@ -1,0 +1,400 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    .banner {
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .navbar {
+        background: #1a1a1a;
+        height: 80px;
+        border: 1px solid rgb(66, 66, 66);
+        width: 100%;
+        margin: auto;
+    }
+    
+    .navbar .img img {
+        margin-top: 30px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    
+    .navbar ul {
+        display: flex;
+        margin-left: 10%;
+    }
+    
+    .navbar ul li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        margin-top: -20px;
+        position: relative;
+        font-size: 12px;
+    }
+    
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    }
+    
+    .navbar ul li::after {
+        content: '';
+        height: 2px;
+        width: 0;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -17px;
+        transition: 0.3s;
+    }
+    
+    .navbar ul li:hover::after {
+        width: 100%;
+    }
+    
+    section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section #slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 85%;
+        object-fit: cover;
+    }
+    
+    section .nav {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section .nav li {
+        list-style: none;
+        cursor: pointer;
+        margin: 10px;
+    }
+    
+    section .nav li img {
+        margin-top: 100px;
+        width: 10px;
+        height: 10px;
+        border: 2px solid rgb(3, 3, 3);
+        border-radius: 4px;
+    }
+    
+    .icons {
+        display: flex;
+        justify-content: end;
+        margin-right: 10px;
+        list-style: none;
+    }
+    
+    .icons a img {
+        color: white;
+        height: 25px;
+        width: 25px;
+        margin-left: 20px;
+        margin-top: -20px;
+        margin-bottom: 30px;
+    }
+    
+    .icons li a {
+        display: inline-block;
+        filter: invert(1);
+        transform: scale(0.9);
+    }
+    
+    .Container {
+        margin-bottom: 10px;
+        height: 130px;
+        width: 25%;
+        margin: auto;
+        text-align: center;
+        margin-top: -100px;
+        padding: 60px;
+        padding-left: 10px;
+        display: block;
+        overflow: hidden;
+        background: url("pink\ bg.png");
+        background-size: 100%;
+    }
+    
+    .Container a {
+        text-decoration: none;
+    }
+    
+    .Container a h3 {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgb(245, 239, 239);
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+    
+    .header p {
+        margin-top: 10px;
+        font-size: inherit;
+        font-weight: inherit;
+        text-align: center;
+        color: grey;
+        font-family: serif;
+        font-size: 18px;
+    }
+    
+    .box {
+        display: inline-block;
+        height: 590px;
+        width: 98%;
+        margin: auto;
+        margin-left: 20px;
+        padding-top: 20px;
+    }
+    
+    .block {
+        display: inline-block;
+        margin: auto;
+        width: 20%;
+        height: 500px;
+        position: relative;
+        text-align: center;
+        margin-left: 70px;
+    }
+    
+    .block p {
+        color: purple;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    .block h3,
+    h5 {
+        color: rgb(24, 23, 23);
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 13px;
+        padding: 8px;
+        letter-spacing: 1px;
+    }
+    
+    .block button {
+        width: 100%;
+        padding: 10px;
+        height: 50px;
+        cursor: pointer;
+        border: 1px solid black;
+        font-weight: bold;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        margin-top: 35px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    
+    .block button span {
+        background: #070404;
+        height: 100%;
+        width: 0;
+        border-radius: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    
+    .block button:hover span {
+        width: 100%;
+        background-color: rgb(27, 22, 22);
+        color: rgb(238, 234, 234);
+    }
+    
+    .block button:hover a {
+        color: rgb(238, 234, 234);
+    }
+    
+    .block button a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    
+    .product {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+        height: 50px;
+        cursor: pointer;
+        margin: auto;
+        border: 1px solid black;
+        margin-top: 10px;
+        font-weight: bold;
+        background: transparent;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    
+    .product span {
+        background: #070404;
+        height: 100%;
+        width: 0;
+        border-radius: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.5s;
+    }
+    
+    .product:hover span {
+        width: 100%;
+        background-color: rgb(27, 22, 22);
+        color: rgb(238, 234, 234);
+    }
+    
+    .product:hover a {
+        color: rgb(255, 255, 255);
+    }
+    
+    .product a {
+        color: rgb(19, 17, 17);
+        text-decoration: none;
+    }
+    
+    .header1 {
+        margin: auto;
+        margin-top: 120px;
+    }
+    
+    .Container1 {
+        margin-bottom: 10px;
+        height: 130px;
+        width: 25%;
+        margin: auto;
+        text-align: center;
+        margin-top: -100px;
+        padding: 60px;
+        padding-left: 10px;
+        display: block;
+        overflow: hidden;
+        background: url("pink\ bg.png");
+        background-size: 100%;
+    }
+    
+    .Container1 a {
+        text-decoration: none;
+    }
+    
+    .Container1 a h3 {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgb(245, 239, 239);
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+    
+    .header1 p {
+        margin-top: 10px;
+        font-size: inherit;
+        font-weight: inherit;
+        text-align: center;
+        font-family: serif;
+        font-size: 18px;
+        color: grey;
+    }
+    
+    .block1 {
+        margin: auto;
+        margin-top: 20px;
+        width: 45%;
+        height: 510px;
+    }
+    
+    .block1 div {
+        display: inline-block;
+        margin: auto;
+        width: 40%;
+        height: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+    
+    .video-1 {
+        margin-top: 30px;
+        margin-left: 15px;
+        width: 100%;
+        height: 50%;
+    }
+    
+    .blog {
+        margin: auto;
+        margin-top: 10px;
+        height: 320px;
+        width: 80%;
+    }
+    
+    .blog div {
+        display: inline-block;
+        width: 22%;
+        margin: auto;
+        margin-left: 35px;
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    
+    .blog>div>p {
+        font-size: 13px;
+        padding: 10px;
+        margin-left: 5px;
+    }
+    
+    .blog>div h4 {
+        color: grey;
+        font-weight: 200;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 5px;
+    }
+    
+    .span1 {
+        margin-left: 10px;
+        font-size: 14px;
+        color: black;
+    }
+    
+    .blog>div>a>img {
+        /* width: 330px; */
+        transition: 2s all ease-in-out;
+    }
+    
+    .blog div a:hover img {
+        transform: scale(1.1);
+    }
