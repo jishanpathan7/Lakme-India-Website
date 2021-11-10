@@ -176,11 +176,12 @@
     .block {
         display: inline-block;
         margin: auto;
-        width: 20%;
+        width: 22%;
         height: 500px;
         position: relative;
         text-align: center;
-        margin-left: 70px;
+        margin-left: 40px;
+        background-color: rgb(110, 50, 50);
     }
     
     .block p {
