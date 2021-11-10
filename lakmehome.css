@@ -21,7 +21,7 @@
     .navbar .img img {
         margin-top: 30px;
         cursor: pointer;
-        margin-left: 10px;
+        margin-left: 30px;
     }
     
     .navbar ul {
@@ -106,7 +106,9 @@
     .icons {
         display: flex;
         justify-content: end;
-        margin-right: 10px;
+        margin-bottom: 50px;
+        margin-right: 40px;
+        margin-top: -0px;
         list-style: none;
     }
     
