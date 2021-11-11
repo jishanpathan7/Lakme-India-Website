@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .banner {
@@ -26,7 +27,7 @@
 
 .navbar ul {
     display: flex;
-    margin-left: 22%;
+    margin-left: 25%;
 }
 
 .navbar ul li {
@@ -34,9 +35,9 @@
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 20px;
-    margin-top: -20px;
+    margin-top: -25px;
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .navbar ul li a {
@@ -52,7 +53,7 @@
     background: #fff;
     position: absolute;
     left: 0;
-    bottom: -17px;
+    bottom: -15px;
     transition: 0.3s;
 }
 
@@ -108,7 +109,7 @@ section .nav li img {
     justify-content: end;
     margin-bottom: 50px;
     margin-right: 40px;
-    margin-top: -0px;
+    margin-top: -10px;
     list-style: none;
 }
 
@@ -188,7 +189,7 @@ section .nav li img {
     color: purple;
     font-weight: bold;
     font-size: 12px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .block h3,
@@ -197,7 +198,7 @@ h5 {
     text-transform: uppercase;
     font-weight: 200;
     font-size: 13px;
-    padding: 8px;
+    padding: 7px;
     letter-spacing: 1px;
 }
 
@@ -509,6 +510,10 @@ h5 {
     margin: 10px;
     text-align: left;
     font-size: 16px;
+}
+
+#one div p {
+    font-size: 14px;
 }
 
 #two {
