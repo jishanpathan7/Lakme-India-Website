@@ -461,7 +461,7 @@ h5 {
     width: 1743px;
     height: 75px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     color: white;
 }
@@ -490,4 +490,71 @@ h5 {
     margin-left: 30px;
     width: 120px;
     height: 35px;
+}
+
+.div2 {
+    border: 1px solid white;
+    margin: auto;
+    margin-top: 10px;
+    width: 92%;
+    display: flex;
+    height: 343px;
+    color: white;
+}
+
+#one {
+    border: 1px solid yellow;
+    width: 1020px;
+    height: 330px;
+}
+
+#one div {
+    margin: auto;
+    margin: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+#two {
+    border: 1px solid rgb(94, 255, 0);
+    width: 400px;
+    height: 330px;
+}
+
+#two h3 {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#two ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: inherit;
+    margin-left: 20px;
+    line-height: 2.5;
+}
+
+#two ul li a {
+    color: inherit;
+    background-color: #0000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#three {
+    border: 1px solid rgb(94, 255, 0);
+    width: 400px;
+    height: 330px;
+}
+
+#three h2 {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+#three div {
+    margin: 10px;
 }
