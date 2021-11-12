@@ -6,102 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lakme -India Sale</title>
+    <link rel="stylesheet" href="lakmehome.css">
+    <link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/S/Salon_Ruj-logo-F9DD61D39F-seeklogo.com.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: sans-serif;
-        }
-        
-        .banner {
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .navbar {
-            background: #1a1a1a;
-            height: 80px;
-            border: 1px solid rgb(66, 66, 66);
-            width: 100%;
-            margin: auto;
-        }
-        
-        .navbar .img img {
-            margin-top: 30px;
-            cursor: pointer;
-            margin-left: 30px;
-        }
-        
-        .navbar ul {
-            display: flex;
-            margin-left: 22%;
-        }
-        
-        .navbar ul li {
-            list-style: none;
-            display: inline-block;
-            margin-left: 10px;
-            margin-bottom: 20px;
-            margin-top: -20px;
-            position: relative;
-            font-size: 12px;
-        }
-        
-        .navbar ul li a {
-            text-decoration: none;
-            color: white;
-            text-transform: uppercase;
-        }
-        
-        .navbar ul li::after {
-            content: '';
-            height: 2px;
-            width: 0;
-            background: #fff;
-            position: absolute;
-            left: 0;
-            bottom: -17px;
-            transition: 0.3s;
-        }
-        
-        .navbar ul li:hover::after {
-            width: 100%;
-        }
-        
-        .icons {
-            display: flex;
-            justify-content: end;
-            margin-bottom: 50px;
-            margin-right: 40px;
-            margin-top: -0px;
-            list-style: none;
-        }
-        
-        .icons a img {
-            color: white;
-            height: 25px;
-            width: 25px;
-            margin-left: 20px;
-            margin-top: -20px;
-            margin-bottom: 30px;
-        }
-        
-        .icons li a {
-            display: inline-block;
-            filter: invert(1);
-            transform: scale(0.9);
-        }
-        
         .sale {
             display: flex;
-            width: 98%;
+            width: 99%;
             height: 100%;
             flex-direction: column;
             justify-content: center;
-            margin: 20px;
-            margin-left: 20px;
-            gap: 20px;
+            margin: 10px 10px;
+            gap: 10px;
         }
         
         .sale a img {
@@ -161,7 +76,7 @@
             color: purple;
             font-weight: bold;
             font-size: 12px;
-            padding: 10px;
+            padding: 4px;
         }
         
         .block h3,
@@ -312,27 +227,114 @@
         }
         
         .div1 {
-            border: 1px solid red;
             width: 100%;
             height: 483px;
         }
         
         .social {
-            border: 1px solid white;
             width: 1743px;
             height: 75px;
             margin: auto;
-            margin-top: 60px;
+            margin-top: 50px;
             display: flex;
             color: white;
         }
         
-        .social p,
-        img {
+        .social p {
             display: flex;
             gap: 10px;
             margin-left: 20px;
-            margin-top: 20px;
+            margin-top: 23px;
+        }
+        
+        .social img {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        .social a img {
+            display: flex;
+            height: 40px;
+            width: 40px;
+        }
+        
+        .social .img img {
+            margin-top: 10px;
+            cursor: pointer;
+            margin-left: 10px;
+            width: 120px;
+            height: 35px;
+        }
+        
+        .div2 {
+            margin: auto;
+            margin-top: 10px;
+            width: 92%;
+            display: flex;
+            height: 343px;
+            color: white;
+        }
+        
+        #one {
+            width: 1020px;
+            height: 330px;
+        }
+        
+        #one p {
+            font-size: 13px;
+        }
+        
+        #one div {
+            margin: auto;
+            margin: 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+        
+        #two {
+            width: 400px;
+            height: 330px;
+        }
+        
+        #two h3 {
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        #two ul li {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            text-align: inherit;
+            margin-left: 20px;
+            line-height: 2.5;
+        }
+        
+        #two ul li a {
+            color: inherit;
+            background-color: #0000;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        #three {
+            width: 400px;
+            height: 330px;
+        }
+        
+        #three h2 {
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+        
+        #three div {
+            margin: 10px;
+        }
+        
+        .lastline {
+            margin-top: 60px;
         }
     </style>
 
@@ -346,29 +348,19 @@
             </div>
             <ul>
                 <li>
-                    <a href="#">HOME</a>
+                    <a href="lakmehome.html">HOME</a>
                 </li>
-                <li>
-                    <a href="#"> YOUR ORDER</a>
-                </li>
+
                 <li>
                     <a href="#">TRENDING NOW</a>
                 </li>
                 <li>
-                    <a href="#">BEST DEALS / SALE</a>
-                </li>
-                <li>
-                    <a href="#">MAKEUP</a>
-                </li>
-                <li>
-                    <a href="#">SKIN CARE</a>
+                    <a href="VirtualTry.html">MAKEUP</a>
                 </li>
                 <li>
                     <a href="#">SALE</a>
                 </li>
-                <li>
-                    <a href="#">FIND YOUR MATCH</a>
-                </li>
+
                 <li>
                     <a href="#">TRENDS</a>
                 </li>
@@ -377,6 +369,9 @@
                 </li>
                 <li>
                     <a href="https://www.instagram.com/lakmeindia/">JOIN THE CLUB</a>
+                </li>
+                <li>
+                    <a href="#">MORE</a>
                 </li>
             </ul>
             <ul class="icons">
@@ -485,15 +480,82 @@
             <a href="support@lakmeindia.com"><img src="email.png">Email</a>
         </div>
     </div>
+    <!-- START FOOTER DIV -->
     <footer class="footer">
         <div class="div1">
             <div class="social">
-                <a href="lakmehome.html"><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+                <div class="img">
+                    <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+                </div>
                 <p>FOLLOW LATEST UPDATES & NEW LAUNCHES</p>
 
+                <a href="https://www.facebook.com/lakme" target="_blank"><img src="facebook.png"></a>
+                <a href="https://www.instagram.com/lakmeindia/" target="_blank"><img src="instagram.png"></a>
+                <a href="https://www.youtube.com/user/ILoveLakme" target="_blank"><img src="youtube.png"></a>
+
             </div>
-        </div>
+            <div class="div2">
+                <div id="one">
+                    <div>
+                        <h4>CONTACT US</h4>
+                        <br> support@lakmeindia.com
+                        <br> 1800-313-9293<br>Mon- Sat, am to 7 pm
+                    </div>
+                    <div>
+                        <br>
+                        <h4>ABOUT US</h3>
+                            <p>
+                                The contemporary Indian beauty expert - Lakmé continuously innovates to offer a wide range of high performance and world class cosmetics and skincare products that have earned recognition from the People for the Ethical Treatment of Animals (PETA). We,
+                                at Lakme, combine international cosmetic technology with an in-depth understanding of the Indian woman’s needs and offer a comprehensive beauty experience to our customers through products that are ideal for a variety of
+                                Indian skin tones. Lakmé was the country's first cosmetic brand to introduce makeup to Indian women and takes pride in being the expert on Indian Beauty for over 50 years. We also take immense pride in being a compassionate
+                                beauty brand which is why we do not believe in or support testing on animals. Our bond with beauty and fashion goes beyond skincare & makeup hence it is manifested through the renowned Lakmé Fashion Week, which is now the
+                                largest fashion event of its kind in the country that celebrates the beauty of fashion.
+                            </p>
+                    </div>
+                </div>
+                <div id="two">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li>
+
+                            <a href="https://api.whatsapp.com/send/?phone=919137630020">Beauty Consultation</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Track Order</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="three">
+                    <h2>Need Help?</h2>
+                    <div>
+                        <p>Email Us:<br>support@lakmeindia.com</p>
+                        <br>
+                        <p>Call Us:<br>1800-313-9293</p>
+                        <br>
+                        <p>Working Timing:<br>Mon - Sat , 9 am to 7 pm</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="lastline">
+                <hr> </div>
     </footer>
+</body>
+<!-- End FOOTER DIV -->
 </body>
 
 </html>

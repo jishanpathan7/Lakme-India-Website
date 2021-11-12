@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .banner {
@@ -26,7 +27,7 @@
 
 .navbar ul {
     display: flex;
-    margin-left: 22%;
+    margin-left: 30%;
 }
 
 .navbar ul li {
@@ -34,9 +35,9 @@
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 20px;
-    margin-top: -20px;
+    margin-top: -27px;
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .navbar ul li a {
@@ -52,7 +53,7 @@
     background: #fff;
     position: absolute;
     left: 0;
-    bottom: -17px;
+    bottom: -15px;
     transition: 0.3s;
 }
 
@@ -108,7 +109,7 @@ section .nav li img {
     justify-content: end;
     margin-bottom: 50px;
     margin-right: 40px;
-    margin-top: -0px;
+    margin-top: -10px;
     list-style: none;
 }
 
@@ -188,7 +189,7 @@ section .nav li img {
     color: purple;
     font-weight: bold;
     font-size: 12px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .block h3,
@@ -197,7 +198,7 @@ h5 {
     text-transform: uppercase;
     font-weight: 200;
     font-size: 13px;
-    padding: 8px;
+    padding: 7px;
     letter-spacing: 1px;
 }
 
@@ -451,17 +452,15 @@ h5 {
 }
 
 .div1 {
-    border: 1px solid red;
     width: 100%;
     height: 483px;
 }
 
 .social {
-    border: 1px solid white;
     width: 1743px;
     height: 75px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     color: white;
 }
@@ -470,7 +469,7 @@ h5 {
     display: flex;
     gap: 10px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 23px;
 }
 
 .social img {
@@ -480,14 +479,116 @@ h5 {
 
 .social a img {
     display: flex;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 .social .img img {
     margin-top: 10px;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 10px;
     width: 120px;
     height: 35px;
+}
+
+.div2 {
+    margin: auto;
+    margin-top: 10px;
+    width: 92%;
+    display: flex;
+    height: 343px;
+    color: white;
+}
+
+#one {
+    width: 1020px;
+    height: 330px;
+}
+
+#one div {
+    margin: auto;
+    margin: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+#one div p {
+    font-size: 14px;
+}
+
+#two {
+    width: 400px;
+    height: 330px;
+}
+
+#two h3 {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#two ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: inherit;
+    margin-left: 20px;
+    line-height: 2.5;
+}
+
+#two ul li a {
+    color: inherit;
+    background-color: #0000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#three {
+    width: 400px;
+    height: 330px;
+}
+
+#three h2 {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+#three div {
+    margin: 10px;
+}
+
+.lastline {
+    margin-top: 60px;
+}
+
+.facts {
+    width: 40%;
+    margin: auto;
+    text-align: left;
+}
+
+.facts p {
+    color: grey;
+    font-size: 13px;
+    padding: 5px;
+    font-weight: 100;
+}
+
+.facts h2 {
+    color: grey;
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.facts h1 {
+    color: grey;
+    text-align: center;
+    margin: 20px;
+}
+
+.facts h3 {
+    text-decoration: underline;
+    font-size: 18px;
 }
