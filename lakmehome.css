@@ -27,7 +27,7 @@
 
 .navbar ul {
     display: flex;
-    margin-left: 25%;
+    margin-left: 30%;
 }
 
 .navbar ul li {
@@ -35,7 +35,7 @@
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 20px;
-    margin-top: -25px;
+    margin-top: -27px;
     position: relative;
     font-size: 14px;
 }
@@ -560,4 +560,35 @@ h5 {
 
 .lastline {
     margin-top: 60px;
+}
+
+.facts {
+    width: 40%;
+    margin: auto;
+    text-align: left;
+}
+
+.facts p {
+    color: grey;
+    font-size: 13px;
+    padding: 5px;
+    font-weight: 100;
+}
+
+.facts h2 {
+    color: grey;
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.facts h1 {
+    color: grey;
+    text-align: center;
+    margin: 20px;
+}
+
+.facts h3 {
+    text-decoration: underline;
+    font-size: 18px;
 }
