@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try on Looks</title>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* #topdiv{
+            width:100%;
+            height:70px;
+            background-color: #991f53;
+            position: relative;
+            text-align: center;
+            font-size: 12px;
+            z-index: 1;
+            color:white;
+            padding:25px;
+        } */
+        
+        .navbar {
+            background: #1a1a1a;
+            height: 80px;
+            border: 1px solid rgb(66, 66, 66);
+            width: 100%;
+            margin: auto;
+        }
+        
+        .navbar .img img {
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        
+        .navbar ul {
+            display: flex;
+            margin-left: 10%;
+        }
+        
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            margin-top: -20px;
+            position: relative;
+            font-size: 12px;
+        }
+        
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+        
+        .navbar ul li::after {
+            content: '';
+            height: 2px;
+            width: 0;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            bottom: -17px;
+            transition: 0.3s;
+        }
+        
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+        .icons {
+         display: flex;
+         justify-content: end;
+         margin-bottom: 50px;
+         margin-right: 40px;
+         margin-top: -0px;
+         list-style: none;
+        }
+
+        .icons a img {
+         color: white;
+         height: 25px;
+         width: 25px;
+         margin-left: 20px;
+         margin-top: -20px;
+         margin-bottom: 30px;
+        }
+
+        .icons li a {
+        display: inline-block;
+        filter: invert(1);
+        transform: scale(0.9);
+        }
+        #left{
+            border:1px solid black;
+            width:500px;
+            height:700px;
+            margin-left:200px;
+            background-image: url("https://plugins-media.makeupar.com/webconsultation/images/layout1-bg.jpg");
+            background-size:cover;
+            margin-top:80px;
+        }
+        #leftbox{
+            background-image: url("https://plugins-media.makeupar.com/webconsultation/images/layout1-bg.jpg");
+            background-size:cover;
+            border:1px solid black;
+            width:330px;
+            height:500px;
+            margin-left:200px;
+            margin-top:20px;
+            display: inline-block;
+        }
+        #r1{
+            border: 2px solid rgb(243, 78, 127);
+            width:260px;
+            height:140px;
+            border-radius:40px;
+            margin:auto;
+            margin-top:8px;
+        }
+        p{
+            font-size:15px;
+            margin:auto;
+            color:white;
+            text-align:center;
+            margin-top:10px;
+        }
+        #r11 ,#r12{
+            border: 2px solid rgb(243, 78, 127);
+            width:120px;
+            height:120px;
+            border-radius:100%;
+            margin-top:15px;
+            display:inline-block;
+            margin-left:32px;
+            text-align:center ; 
+        }
+        #text{
+            flex-direction:column;
+            margin-left:300px;
+            word-spacing:50px;
+            font-family: Futura,sans-serif;
+            color: #555050;
+            background: #fff;
+            line-height: 1.5; 
+            font-size:50px;
+            font-weight:100px;
+            font-style:normal;
+        }
+        #camera{
+            width:25%;
+            margin-left:100px;
+            margin-top: 20px;;
+        }
+        #makeup{
+            width:45%;
+            margin-left:3px;
+            margin-top: 15px;
+        }
+        #arrow{
+            width:25%;
+            margin-left:3px;
+            margin-top: 15px;
+        }
+        #rightbox{
+            /* border:1px solid black; */
+            width:800px;
+            height:400px;
+            margin-left:100px;
+            display: inline-block; 
+        }
+        #card1 {
+            /* border:1px solid black; */
+            width:250px;
+            height:300px;
+            display: inline-block;
+            margin-left:10px;
+            margin-top:20px;
+        }
+        #card2 {
+            /* border:1px solid black; */
+            width:250px;
+            height:300px;
+            display: inline-block;
+            margin-left:10px;
+        }
+        #card3 {
+            /* border:1px solid black; */
+            width:250px;
+            height:300px;
+            display: inline-block;
+            margin-left:10px;
+        }
+        #m1 , #m2 , #m3{
+            border:1px solid black;
+            width:250px;
+            height:300px;
+
+        }
+        .slider-box{
+            width:100%;
+            height:90vh;
+            margin:0px auto;
+            position:relative;
+        }
+        #slider{
+            width:100%;
+            height:100%;
+            display:inline-flex;
+        }
+        #img1{
+            width:100%;
+            height:100%;
+        }
+        #slider img{
+            width:100%;
+        }
+        .indicators{
+            position:absolute;
+            left:50%;
+            top:700px;
+            transform:translateX(-100%);
+        }
+        .indicators span{
+            display:inline-block;
+            width:15px;
+            height:15px;
+            border-radius:50%;
+            border:solid #fff 3px;
+            background: black;
+            cursor:pointer;
+
+        }
+        .indicators span:hover{background:rgb(136, 43, 43)}
+        
+        .bottom-box{
+            /* border:2px solid red; */
+            width:100%;
+            
+            margin-top:40px;
+        }
+        h3{
+            color:white;
+            text-align: center;
+        }
+        #leftbox1{
+            /* border:2px solid red; */
+            width:330px;
+            height:500px;
+        }
+        #downbox{
+            /* border:1px solid red; */
+            /* background-color: yellow; */
+            width:100%;
+            height:700px;
+            margin-top:20px;
+            display:inline-block;
+            gap:30px;
+        }
+        .card11{
+            background-color: whitesmoke;
+            margin-top:50px;
+            width:180px;
+            height:200px;
+            margin-left:110px; 
+            display: inline-block; 
+        }
+        .card12{
+            background-color: whitesmoke;
+            margin-top:50px;
+            width:180px;
+            height:200px;
+            margin-left:90px; 
+            display: inline-block; 
+        }
+        .card13{
+            background-color: whitesmoke;
+            margin-top:50px;
+            width:180px;
+            height:200px;
+            margin-left:90px; 
+            display: inline-block; 
+        }
+        .downimg{
+            width:250px;
+            height:250px;
+        }
+        .downimg1{
+            width:250px;
+            height:250px;
+            margin-top:30px;
+        }
+        #button{
+            width:250px;
+            height:40px;
+            margin-top:20px;
+            transition:ease-out 0.3s;
+            box-shadow:insert 300px 0 0 0 #f9e506;
+            background-color:black;
+            color:white;
+            position:relative;
+        }
+        #button:hover{
+            box-shadow:inset 300px 0 0 0 white;
+            cursor:pointer;
+            color:#000;
+        }
+        #button1{
+            width:250px;
+            height:40px;
+            margin-top:20px;
+            background-color: white;
+            position:relative;
+        }
+        #green{
+            /* border: 1px solid green; */
+            width:100%;
+            height:650px; 
+            margin-left:50px;  
+        }
+        #red{
+            /* border: 1px solid red; */
+            width:100%;
+            height:550px; 
+        }
+        #blue{
+            /* border: 1px solid blue; */
+            width:100%;
+            height:550px;
+        }
+        #select{
+          
+            width:250px;
+            height:20px;
+        }
+        #select1{
+          
+          width:250px;
+          height:20px;
+      }
+        #pink{
+            background-image: url("https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/main/pink%20bg.png?raw=true");
+            width:500px;
+            height:140px;
+            margin-left:500px;
+            margin-top:70px;
+            border:1px solid white;
+        }
+        #sectionhead{
+            border:1px solid transparent;
+            width:300px;
+            height:30px;
+            margin-left:70px;
+            margin-top:60px;
+            text-align:center;
+            color:white;
+            font-weight:bold;
+            font-size:20px;
+            letter-spacing: 3.5px;
+        }
+        #extra{
+            border:1px solid white;
+            width:280px;
+            height:80px;
+            margin-top:10px;
+        }
+        #extra1{
+            border:1px solid white;
+            width:280px;
+            height:80px;
+            margin-top:10px;
+            
+        }
+        .downtext{
+            border:1px solid white;
+            width:280px;
+            height:80px;
+            
+        }
+        .textstyle{
+            font-size: 13px;
+            color:grey;
+            text-align:center;
+        }
+        .box2 {
+    border: 1px solid black;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.box2 div {
+    display: flex;
+    width:500px;
+    height:100px;
+    margin-left: 170px;
+    margin-right:200px;
+    /* border:1px solid yellow; */
+    margin-top:50px;
+    gap:7px;
+
+}
+div h3{
+    margin-top:10px;
+ color:black;
+ text-align:left;
+}
+.box2 a {
+    color: black;
+    text-align: right;
+    text-decoration: none;
+}
+
+.box2 a img {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    margin: 10px;
+    margin-left: 35px;
+    width: 30px;
+}
+
+#line {
+    border: 0.5px solid rgb(80, 74, 74);
+    width: 1px;
+    height: 70px;
+    margin: 10px;
+    margin-right: -80px;
+}
+
+.footer {
+    width: 100%;
+    height: 700px;
+    border: 1px solid white;
+    background-color: black;
+    
+}
+
+.div1 {
+    border: 1px solid red;
+    width: 100%;
+    height: 700px;
+}
+
+.social {
+    /* border: 1px solid white; */
+    width: 1743px;
+    height: 75px;
+    margin-left: 40px;
+    margin-top: 60px;
+    display: flex;
+    color: white;
+}
+
+.social p {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.social img {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.social a img {
+    display: flex;
+    height: 50px;
+    width: 50px;
+}
+
+.social .img img {
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 30px;
+    width: 120px;
+    height: 35px;
+}
+.downtext1{
+    /* border:1px solid white; */
+width:50%;
+height:500px;
+color:white;
+    line-height:1.5;
+    font-size:14px;
+    margin-left:40px;
+    margin-top:30px;
+    display:inline-block;
+}
+.downright{
+    /* border:1px solid red; */
+    width:40%;
+    height:400px;
+color:white;
+margin-left:40px;
+display:inline-block;
+font-family: Futura,sans-serif;
+}
+#help{
+    /* border:1px solid red; */
+    width:25%;
+    height:300px;
+    margin-left:40px;
+    margin-top:20px;
+    display:inline-block;
+}
+#needhelp{
+    /* border:1px solid red; */
+    width:30%;
+    height:300px;
+    margin-left:200px;
+    margin-top:20px;
+    display:inline-block;
+}
+        </style>
+</head>
+<body>
+    <!-- <div id="topdiv">Free Shipping on order over 750</div> -->
+    <div class="navbar">
+        <div class="img">
+            <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+        </div>
+        <ul>
+            <li>
+                <a href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#">TRENDING NOW</a>
+            </li>
+            <li>
+                <a href="#">MAKEUP</a>
+            </li>
+            <li>
+                <a href="#">SALES</a>
+            </li>
+            <li>
+                <a href="#">FIND YOUR MATCH</a>
+            </li>
+            <li>
+                <a href="#">TRENDS</a>
+            </li>
+            <li>
+                <a href="#">GET THE LOOK</a>
+            </li>
+            <li>
+                <a href="#">JOIN THE CLUB</a>
+            </li>
+            <li>
+                <a href="#">MORE</a>
+            </li>
+        </ul>
+        <ul class="icons">
+            <li>
+                <a href="#"><img src="https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/Amruta/wishlist.png?raw=true"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/Amruta/user.png?raw=true"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/Amruta/search.png?raw=true"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/Amruta/shopping-bag.png?raw=true"></a>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- Image slider section -->
+    <div class="slider-box">
+        <div id="slider">
+            <img id="img1" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/AR_banner_66bead8c-bec8-4fc4-ba1e-ed3cb152b8c9.jpg?v=1634111398">
+            <img id="img1" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/anushree_reddy_a3878911-49de-4cf2-bf41-78a21c34f72c.jpg?v=1634111374">
+        </div>
+        <div class="indicators">
+            <span id="btn1"></span>
+            <span id="btn2"></span>
+        </div>
+    </div>
+
+    <!-- For Bottom Box -->
+    <div class="bottom-box">
+
+        <!-- For Left Box -->
+        <p style="color:black;text-align: left;margin-left:230px;font-size:18px;" >Step 1: Choose Try On experience</p>
+        <div id="leftbox">
+            <div id="leftbox1">
+            <div style="color:white;margin-top:100px;text-align: center;font-size:20px;">Choose Try-on Experiance</div>
+            <div id="r1">
+             <img id="camera" src="data:image/png;base64,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"/>
+                <p style="font-size:20px;">Live Makeup</p>
+            </div>
+            <div id="r11"> 
+                <img id="makeup" src="data:image/png;base64,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"/> 
+            <p>Choose <br>a Model</p>
+            </div>
+            <div id="r12">
+                <img id="arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA6CAYAAADGFcvAAAAABHNCSVQICAgIfAhkiAAAAgRJREFUaEPt2T9uE0EUx/Hva+iCKOmSG0AugJKaSECLKOwbkJKKlOmSijY5ggtSUMERjDgAUIOUkAs89MKuszHe+fuKlTLTrnf349/MvPGMRVVnwHtgh+m1K2AhInNR1e8TRQ5j2zXoD2B7emHeEb0yqHX90USxf7qun8nEk1zxGtS7p1qiLVHvBLyfd3/HqKq+BL6IiK3Tbs010W6VOwOWwL4n1g06QPYpfgOeeWFdoBuQPdYt2WpoAOmKrYImIN2wxdAMpAu2CJqIvAYertWn4jGbDQ0gT4DDAewT8Bh44oHNggaQc+AX8HGAugDeWPH3wCZDQ0gROVfV5+tQETlQ1Uce2CRoDGkpjkG7a9XYKDQFGYN6YIPQVGQKtBY7Cs1BpkJrsBuhucgcaCn2P2gJMhdagr0DLUWWQHOxK2gNshSag72Bquoe8HnDvmFuxTxlPxGqo7H7A4uCbWn27f4eugBerD0wGVmTaP/OAHZXRJY91E7z7DC3b1lID+jIMPgpIjcHzD3UlrhT4KkdQYqIJZzVarp++KIuWbMY8K2luYJmiUY+7AUds0TX+tQv0aBdUi1R4MJ+OKcOndjnWqIt0dgYiV1v5amVp9sx0spTbL4Er7fJ1CZTm0xVU+j25jaZ7vNk2gJ+Aw+6EN6JyLHTyPq3XfZq3R+2r4GvwAcRufR69l+4lpbES/dJYAAAAABJRU5ErkJggg=="/> 
+                <p>Upload <br>a photo</p>
+            </div>
+        </div>
+</div>
+        <!-- For Right Box -->
+      
+        <div id="rightbox">
+            <h4 style="text-align:center">Step 2: Click on the Look to Try on</h4>
+<div id="card1">
+    <img id="m1"src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/Look_1_-_Wine_Dine_22de5d29-16b9-431d-8aea-1f2b01f2a1ac.jpg?v=1634111808"/>
+    <h4 style="text-align:center;color:rgb(109, 14, 69)">Date Night Look</h4>
+</div>
+<div id="card2">
+    <img id="m2"src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/Look_3_-_Pink_Affair_1669f8bf-4982-4aab-a46e-f51e15225813.jpg?v=1634111778"/>
+    <h4 style="text-align:center;color:rgb(109, 14, 69)">Monochromatic Magic</h4>
+</div>
+<div id="card3">
+    <img id="m3"src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/Look_2_-_Ravishing_Red_2a43ceb4-3d68-463b-9d98-3ec2b2e9e8e1.jpg?v=1634111882"/>
+    <h4 style="text-align:center;color:rgb(109, 14, 69)">Ravishing Red</h4>
+</div>
+        </div>
+    </div>
+<div id="pink">
+    <div id="sectionhead">SHOP THE LOOK</div>
+    
+</div>
+    <!-- For Extreme down boxes -->
+    <div id="downbox">
+
+        <!-- For first image -->
+    
+        
+<div id="green">
+    
+    <div class="card11">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeEyeconicCurlingMascara_Black_9ml_ca9dbcdc-895c-4af3-af45-ec28ddacc124.jpg?v=1632215958"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME EYECONIC CURLING <br>MASCARA, 9ML</p></div>
+      
+            <div id="extra">
+                <p style="color:black;font-size:12px;text-align:center;margin-top:40px;">Please select variants</p>
+          
+            <select id="select">
+                <option>Please select</option>
+                <option>black</option>
+                <option>blue</option>
+            </select></div>
+            <h5 style="text-align: center;margin-top:50px;">375</h5>
+            <button id="button">SHOP NOW</button>
+        
+    </div>
+    <div class="card11">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24810_H1-8901030790010_a5f353b2-45ee-4b19-a3b6-7289eec7e610.jpg?v=1632739218"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE 3D EYE BROW<br>DEFINER</p></div>
+            <div id="extra">
+            <p style="color:black;font-size:12px;text-align:center;margin-top:40px;">Please select variants</p>
+            
+            <select id="select">
+                <option>Please select</option>
+                <option>black</option>
+                <option>blue</option>
+            </select></div>
+            <h5 style="text-align: center;margin-top:50px;">800</h5>
+            <button id="button1">SOLD OUT</button>
+        
+    </div>
+    <div class="card11">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/29132_H1-8901030851872_35340e31-68a2-4bf8-a07b-fad9ec815fd6.jpg?v=1632404467"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE MATTE MELT<br>LIQUID LIP COLOR-WINE...</p></div>
+            <div id="extra1">
+            <p style="color:white;font-size:12px;text-align:left;margin-top:40px;">Please select variants</p>
+            
+            <select id="select" style="color:white;border-color: white;">
+                <option>Please select</option>
+                <option>Voilet</option>
+                <option>Pink</option>
+            </select></div>
+            <h5 style="text-align: center;margin-top:50px;">700</h5>
+            <button id="button">SHOP NOW</button>
+        
+    </div>
+    <div class="card11">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Coral_Blush_26c7e7a4-d2e9-45bd-a8d6-cd4de8429943.jpg?v=1632403491"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE FACE STYLIST<br>BLUSH DUOS-BLUSH</p> </div>
+            <div id="extra1">
+            <p style="color:white;font-size:12px;text-align:left;margin-top:40px;">Please select variants</p>
+            
+            <select id="select" style="color:white;border-color: white;">
+                <option>Please Select</option>
+                <option>Voilet</option>
+                <option>Pink</option>
+            </select></div>
+            <h5 style="text-align: center;margin-top:50px;">600</h5>
+            <button id="button">SHOP NOW</button>
+
+
+            
+    </div>
+</div>
+
+<!-- For second image -->
+<div id="red">
+    <div class="card12">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/2_tropical-beach--nude-umbrella_0416bf35-fceb-44a5-bd02-7b8c5a6fa587.jpg?v=1632402607"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE MATTE MELT MINI-<br>NUDE UMBRELLA</p>
+            <h5 style="text-align: center;margin-top:100px;">597</h5>
+            <button id="button">SHOP NOW</button>
+        </div>
+    </div>
+    <div class="card12">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeAbsoluteMicroBrowPerfecter_charcoal_bb561471-10bf-427f-9a1c-6d648a86a571.jpg?v=1632841124"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE MICRO BROW<br>PERFECTER, 0.14 G-CHA...</p>
+            <h5 style="text-align: center;margin-top:100px;">597</h5>
+            <button id="button">SHOP NOW</button>
+        </div>
+    </div>
+    <div class="card12">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24812_H2-8901030790058_94a5acdf-ba40-4b7e-b537-a993daa84cbf.jpg?v=1632226905"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE 3D LASH<br>VOLUMIZER</p>
+            <h5 style="text-align: center;margin-top:100px;">597</h5>
+            <button id="button">SHOP NOW</button>
+        </div>
+    </div>
+    <div class="card12">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/2-fop-berry-martini_1_9373a61a-1322-4446-b890-c813861ab6f7.jpg?v=1632286325"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE SPOTLIGHT<br>EYESHADOW PALLETTE- BE...</p>
+            <h5 style="text-align: center;margin-top:100px;">597</h5>
+            <button id="button1">SOLD OUT</button>
+        </div>
+    </div>
+    <div class="card12">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeAbsoluteFaceStylistBlushDuosPinkBlush_6b5f8ebc-962d-4275-953a-e28991663691.jpg?v=1632400016"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE FACE STYLIST<br>BLUSH DUOS-PINK BLUSH</p>
+            <h5 style="text-align: center;margin-top:100px;">597</h5>
+            <button id="button">SHOP NOW</button>
+        </div>
+    </div>
+</div>
+
+<!-- For third image -->
+<div id="blue">
+    <div class="card13">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeAbsoluteInfinityEyeshadowPalette-SoftNudes_cb49d8c5-101b-4518-9f71-ce37bd9ff40b.jpg?v=1632231754"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE INFINITY EYE<br>SHADOW PALLATE . SO</p>
+            <h5 style="text-align: center;margin-top:100px;">597</h5>
+            <button id="button">SHOP NOW</button>
+        </div>
+    </div>
+    <div class="card13">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24812_H2-8901030790058_94a5acdf-ba40-4b7e-b537-a993daa84cbf.jpg?v=1632226905"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE 3D LASH<br>VOLUMIZER</p>
+            <h5 style="text-align: center;margin-top:100px;">680</h5>
+            <button id="button">SHOP NOW</button>
+        </div>
+    </div>
+    <div class="card13">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Hero_2bbf406a-549d-4fc9-8fb8-eef8be6dc242.jpg?v=1632226266"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ICONIC INSTA COOL<br>KAJAL</p>
+            <h5 style="text-align: center;margin-top:100px;">225</h5>
+            <button id="button">SHOP NOW</button>
+        </div>
+    </div>
+    <div class="card13">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeAbsoluteShineLiquidEyeLiner-4.5mlBlack_d0076758-4f88-4134-bece-9b8cdbe16ad7.jpg?v=1632476981"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE SHINE LINE LIQUID<br>EYE LINER -BLA...</p>
+            <h5 style="text-align: center;margin-top:100px;">450</h5>
+            <button id="button1">SOLD OUT</button>
+        </div>
+    </div>
+    <div class="card13">
+        <img class="downimg" src="https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeAbsoluteMicroBrowPerfecter_charcoal_bb561471-10bf-427f-9a1c-6d648a86a571.jpg?v=1632841124"/>
+        <div class="downtext">
+            <p class="textstyle">LAKME ABSOLUTE MICRO BROW <br>PERFECTER , 0.14 G. CHA...</p>
+            <h5 style="text-align: center;margin-top:100px;">800</h5>
+            <button id="button">SHOP NOW</button>
+        </div>
+    </div>
+    
+    </div>
+    </div>
+
+<!-- For down Box -->
+<div class="box2">
+    <div>
+        <h3>STORE<br> LOCATOR</h3>
+        
+        <a href="#"><img src="location icon.png"></a>
+    </div>
+    <div id="line"></div>
+    <div>
+        <h3>GET IN TOUCH</h3>
+
+        <a href><img src="telephone.png">Call</a>
+        <a href><img src="comment.png">Chat</a>
+        <a href><img src="email.png">Email</a>
+    </div>
+</div>
+<footer class="footer">
+    <div class="div1">
+        <div class="social">
+            <div class="img">
+                <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+            </div>
+            <p>FOLLOW LATEST UPDATES & NEW LAUNCHES</p>
+
+            <a href><img src="facebook.png"></a>
+                <a href><img src="instagram.png"></a>
+                <a href><img src="youtube.png"></a>
+
+        </div>
+        <div class="downtext1">
+            CONTACT US<br><br>
+            support@lakmeindia.com<br>
+            1800-313-9293<br>
+            Mon - Sat , 9 am to 7 pm<br><br>
+            ABOUT US<br><br>
+            The contemporary Indian beauty expert - Lakmé continuously innovates to offer a wide range of high performance and
+             world class cosmetics and skincare products that have earned recognition from the People for the Ethical Treatment of 
+             Animals (PETA). We, at Lakme, combine international cosmetic technology with an in-depth understanding of the Indian
+              woman’s needs and offer a comprehensive beauty experience to our customers through products that are ideal for a 
+              variety of Indian skin tones. Lakmé was the country's first cosmetic brand to introduce makeup to Indian women and 
+              takes pride in being the expert on Indian Beauty for over 50 years. We also take immense pride in being a 
+              compassionate beauty brand which is why we do not believe in or support testing on animals. Our bond with beauty
+               and fashion goes beyond skincare & makeup hence it is manifested through the renowned Lakmé Fashion Week, which 
+               is now the largest fashion event of its kind in the country that celebrates the beauty of fashion.
+               </div> 
+
+<div class="downright">
+<div id="help">
+    HELP<br><br>
+    Beauty Consultation<br><br>
+    FAQ<br><br>
+    Contact Us<br><br>
+    Track Order<br><br>
+    Shipping<br><br>
+    Terms & Conditions
+</div>
+<div id="needhelp">
+    NEED HELP?<br><br>
+    Email Us:<br><br>
+    support@lakmeindia.com<br><br>
+    
+    Call Us:<br><br>
+    1800-313-9293<br><br>
+    
+    Working Timing:<br><br>
+    Mon - Sat , 9 am to 7 pm
+</div>
+                   </div>
+        </div>
+
+   
+</footer>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+<script>
+    var slide = document.getElementById("slider");
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+
+    btn1.onclick = function(){
+        slide.style.transform = "translateX(0px)";
+    }
+    btn2.onclick = function(){
+        slide.style.transform = "translateX(-100%)";
+    }
+    
+    window.onload=function(){
+    document.getElementById("green").style.display="none";
+    document.getElementById("red").style.display="none";
+    document.getElementById("blue").style.display="none";
+}
+
+    document.getElementById("m1").addEventListener("click",function(){
+
+var box1= document.getElementById("green");
+box1.style.display = "block";
+var box2= document.getElementById("red");
+box2.style.display="none";
+var box3= document.getElementById("blue");
+box3.style.display="none";
+});
+
+document.getElementById("m2").addEventListener("click",function(){
+ 
+ var box1= document.getElementById("green");
+box1.style.display = "none";
+var box2= document.getElementById("red");
+box2.style.display="block";
+var box3= document.getElementById("blue");
+box3.style.display="none";
+
+});
+
+document.getElementById("m3").addEventListener("click",function(){
+ 
+ var box1= document.getElementById("green");
+box1.style.display = "none";
+var box2= document.getElementById("red");
+box2.style.display="none";
+var box3= document.getElementById("blue");
+box3.style.display="block";
+});
+
+// var extra1= document.getElementById("extra1");
+// extra1.style.display="none";
+</script>
