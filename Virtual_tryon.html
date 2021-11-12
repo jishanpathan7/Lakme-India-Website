@@ -11,9 +11,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
-        #topdiv{
+        /* #topdiv{
             width:100%;
             height:70px;
             background-color: #991f53;
@@ -23,7 +23,7 @@
             z-index: 1;
             color:white;
             padding:25px;
-        }
+        } */
         
         .navbar {
             background: #1a1a1a;
@@ -76,6 +76,29 @@
         *{
             padding:0%;
             margin:0%
+        }
+        .icons {
+         display: flex;
+         justify-content: end;
+         margin-bottom: 50px;
+         margin-right: 40px;
+         margin-top: -0px;
+         list-style: none;
+        }
+
+        .icons a img {
+         color: white;
+         height: 25px;
+         width: 25px;
+         margin-left: 20px;
+         margin-top: -20px;
+         margin-bottom: 30px;
+        }
+
+        .icons li a {
+        display: inline-block;
+        filter: invert(1);
+        transform: scale(0.9);
         }
         #container{
             /* border:1px solid red; */
@@ -301,55 +324,76 @@
             font-weight: bolder;
             font-size:25px;
         }
-        .downbox {
+        
+.box2 {
     border: 1px solid black;
-   width:100%;
-    height: 120px;
+    display: flex;
+    height: 100px;
     justify-content: center;
     align-items: center;
     background-color: #f2f2f2;
-    margin-top: 100px;
-    
+    margin-top: 350px;
+    margin-left: 10px;
 }
 
-.downbox div {
-    border:1px solid red;
-    width:100px;
+.box2 div {
     display: flex;
-    justify-content: center;
-    text-align: left;
-    margin-left: 300px;
-    margin-top:30px;
+    width:500px;
+    height:100px;
+    margin-left: 170px;
+    margin-right:200px;
+    /* border:1px solid yellow; */
+    margin-top:50px;
+    gap:7px;
+
+}
+div h3{
+    margin-top:10px;
+ color:black;
+ text-align:left;
+}
+.box2 a {
+    color: black;
+    text-align: right;
+    text-decoration: none;
+}
+
+.box2 a img {
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    margin: 10px;
+    margin-left: 35px;
+    width: 30px;
 }
 
 #line {
     border: 0.5px solid rgb(80, 74, 74);
-    width: 0.5px;
-    height: 100px;
-    margin-top:-60px;
-    margin-left:800px;
+    width: 1px;
+    height: 70px;
+    margin: 10px;
+    margin-right: -80px;
 }
-#right{
-    display:flex;
-}
+
 .footer {
     width: 100%;
-    height: 600px;
+    height: 700px;
     border: 1px solid black;
     background-color: black;
+    
 }
 
 .div1 {
     border: 1px solid red;
     width: 100%;
-    height: 483px;
+    height: 700px;
 }
 
 .social {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 1743px;
     height: 75px;
-    margin: auto;
+    margin-left: 40px;
     margin-top: 60px;
     display: flex;
     color: white;
@@ -380,11 +424,47 @@
     width: 120px;
     height: 35px;
 }
+.downtext{
+    /* border:1px solid white; */
+width:50%;
+height:500px;
+color:white;
+    line-height:1.5;
+    font-size:14px;
+    margin-left:40px;
+    margin-top:30px;
+    display:inline-block;
+}
+.downright{
+    /* border:1px solid red; */
+    width:40%;
+    height:400px;
+color:white;
+margin-left:40px;
+display:inline-block;
+font-family: Futura,sans-serif;
+}
+#help{
+    /* border:1px solid red; */
+    width:25%;
+    height:300px;
+    margin-left:40px;
+    margin-top:20px;
+    display:inline-block;
+}
+#needhelp{
+    /* border:1px solid red; */
+    width:30%;
+    height:300px;
+    margin-left:200px;
+    margin-top:20px;
+    display:inline-block;
+}
     </style>
 </head>
 <body>
     <!-- <h1>Find Your match</h1> -->
-    <div id="topdiv">Free Shipping on order over rs750</div>
+    <!-- <div id="topdiv">Free Shipping on order over 750</div> -->
     <div class="navbar">
         <div class="img">
             <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
@@ -394,22 +474,13 @@
                 <a href="#">HOME</a>
             </li>
             <li>
-                <a href="#"> YOUR ORDER</a>
-            </li>
-            <li>
                 <a href="#">TRENDING NOW</a>
-            </li>
-            <li>
-                <a href="#">BEST DEALS / SALE</a>
             </li>
             <li>
                 <a href="#">MAKEUP</a>
             </li>
             <li>
-                <a href="#">SKIN CARE</a>
-            </li>
-            <li>
-                <a href="#">COLLECTIONS</a>
+                <a href="#">SALES</a>
             </li>
             <li>
                 <a href="#">FIND YOUR MATCH</a>
@@ -422,6 +493,23 @@
             </li>
             <li>
                 <a href="#">JOIN THE CLUB</a>
+            </li>
+            <li>
+                <a href="#">MORE</a>
+            </li>
+        </ul>
+        <ul class="icons">
+            <li>
+                <a href="#"><img src="https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/Amruta/wishlist.png?raw=true"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/Amruta/user.png?raw=true"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/Amruta/search.png?raw=true"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://github.com/jishanpatel7/Consruct-Week-Lakme-Project/blob/Amruta/shopping-bag.png?raw=true"></a>
             </li>
         </ul>
     </div>
@@ -522,18 +610,77 @@
 </div>
 
 <!-- For down Box -->
-<div class="downbox">
-    <div>STORE LOCATOR</div>
+<div class="box2">
+    <div>
+        <h3>STORE<br> LOCATOR</h3>
+        
+        <a href="#"><img src="location icon.png"></a>
+    </div>
     <div id="line"></div>
-    <div id="right">
-<h2>Get in touch</h2>
-    </div>
+    <div>
+        <h3>GET IN TOUCH</h3>
 
+        <a href><img src="telephone.png">Call</a>
+        <a href><img src="comment.png">Chat</a>
+        <a href><img src="email.png">Email</a>
     </div>
+</div>
+<footer class="footer">
+    <div class="div1">
+        <div class="social">
+            <div class="img">
+                <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+            </div>
+            <p>FOLLOW LATEST UPDATES & NEW LAUNCHES</p>
+
+            <a href=""><img src="facebook.png"></a>
+                <a href=""><img src="instagram.png"></a>
+                <a href=""><img src="youtube.png"></a>
+
+        </div>
+        
+            <div class="downtext">
+                CONTACT US<br><br>
+                support@lakmeindia.com<br>
+                1800-313-9293<br>
+                Mon - Sat , 9 am to 7 pm<br><br>
+                ABOUT US<br><br>
+                The contemporary Indian beauty expert - Lakmé continuously innovates to offer a wide range of high performance and
+                 world class cosmetics and skincare products that have earned recognition from the People for the Ethical Treatment of 
+                 Animals (PETA). We, at Lakme, combine international cosmetic technology with an in-depth understanding of the Indian
+                  woman’s needs and offer a comprehensive beauty experience to our customers through products that are ideal for a 
+                  variety of Indian skin tones. Lakmé was the country's first cosmetic brand to introduce makeup to Indian women and 
+                  takes pride in being the expert on Indian Beauty for over 50 years. We also take immense pride in being a 
+                  compassionate beauty brand which is why we do not believe in or support testing on animals. Our bond with beauty
+                   and fashion goes beyond skincare & makeup hence it is manifested through the renowned Lakmé Fashion Week, which 
+                   is now the largest fashion event of its kind in the country that celebrates the beauty of fashion.
+                   </div> 
+                   <div class="downright">
+<div id="help">
+    HELP<br><br>
+    Beauty Consultation<br><br>
+    FAQ<br><br>
+    Contact Us<br><br>
+    Track Order<br><br>
+    Shipping<br><br>
+    Terms & Conditions
+</div>
+<div id="needhelp">
+    NEED HELP?<br><br>
+    Email Us:<br><br>
+    support@lakmeindia.com<br><br>
     
-    <div class="footer">
+    Call Us:<br><br>
+    1800-313-9293<br><br>
+    
+    Working Timing:<br><br>
+    Mon - Sat , 9 am to 7 pm
+</div>
+                   </div>
+        </div>
 
-    </div>
+   
+</footer>
 </body>
 </html>
 
