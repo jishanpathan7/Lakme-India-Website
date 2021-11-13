@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product_project</title>
+    <link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/S/Salon_Ruj-logo-F9DD61D39F-seeklogo.com.png">
+
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .banner {
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .navbar {
+            background: #1a1a1a;
+            height: 80px;
+            border: 1px solid rgb(66, 66, 66);
+            width: 100%;
+            margin: auto;
+        }
+        
+        .navbar .img img {
+            margin-top: 30px;
+            cursor: pointer;
+            margin-left: 30px;
+        }
+        
+        .navbar ul {
+            display: flex;
+            margin-left: 30%;
+        }
+        
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            margin-top: -27px;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+        
+        .navbar ul li::after {
+            content: '';
+            height: 2px;
+            width: 0;
+            background: #fff;
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            transition: 0.3s;
+        }
+        
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+        
+        .icons {
+            display: flex;
+            justify-content: end;
+            margin-bottom: 50px;
+            margin-right: 40px;
+            margin-top: -10px;
+            list-style: none;
+        }
+        
+        .icons a img {
+            color: white;
+            height: 25px;
+            width: 25px;
+            margin-left: 20px;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+        
+        .icons li a {
+            display: inline-block;
+            filter: invert(1);
+            transform: scale(0.9);
+        }
+        
+        #container {
+            margin-top: 50px;
+            width: 99%;
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-gap: 3%;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #container>div {
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        
+        h2,
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        img {
+            margin: auto;
+            margin-left: 150px;
+        }
+        
+        #container>div>button {
+            width: 43%;
+            padding: 10px;
+            height: 50px;
+            cursor: pointer;
+            border: 1px solid black;
+            font-weight: bold;
+            background: transparent;
+            cursor: pointer;
+            margin: auto;
+            margin-top: 94px;
+            margin-left: 150px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: black;
+        }
+        
+        #container>div>button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+        
+        #sortBtn {
+            width: 10%;
+            height: 30px;
+            background-color: rgb(0, 0, 0);
+            margin-top: 10px;
+        }
+        
+        #cart {
+            width: 20%;
+            height: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        #overview h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!-- Navbar page Start -->
+        <div class="banner">
+            <div class="navbar">
+                <div class="img">
+                    <a href="lakmehome.html"><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="lakmehome.html">HOME</a>
+                    </li>
+
+                    <li>
+                        <a href="productpage.html">TRENDING NOW</a>
+                    </li>
+
+                    <li>
+                        <a href="Virtual_tryon.html">MAKEUP</a>
+                    </li>
+
+                    <li>
+                        <a href="sale.html">SALES</a>
+                    </li>
+                    <li>
+                        <a href="Virtual_tryon.html">FIND YOUR MATCH</a>
+                    </li>
+                    <li>
+                        <a href="#">TRENDS</a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.youtube.com/user/ILoveLakme" target="_blank">GET THE LOOK</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/lakmeindia/" target="_blank">JOIN THE CLUB</a>
+                    </li>
+                    <li>
+                        <a href="Try_on_looks.html">MORE</a>
+                    </li>
+                </ul>
+                <ul class="icons">
+                    <li>
+                        <a href="#"><img src="wishlist.png"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="user.png"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="search.png"></a>
+                    </li>
+                    <li>
+                        <a href="cart_project.html"><img src="shopping-bag.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="overview">
+            <h1>TOP SELLER</h1>
+            <hr>
+            <br>
+            <br>
+            <hr>
+        </div>
+        <!-- Navbar page END -->
+
+
+
+
+
+    </body>
+
+</html>
+
+
+<script>
+    //ADDING ITEMS
+    var data = [{
+            name: "LAKME BLUSH AND GLOW SHIT MASK",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/27474_H_8901030858710_300x.jpg?v=1634889505",
+            price: 699,
+        }, {
+            name: "LAKME 9 TO 5 VITAMIN C +  SKINCARE VALUE SET",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/1000x1000-hero_1_300x.jpg?v=1620801652",
+            price: 450,
+        }, {
+            name: "LAKME GREENTEA ESSENTIALS KIT",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/img1_3_1_300x.jpg?v=1620910668",
+            price: 699,
+        }, {
+            name: "LAKME 9 TO 5 PRIMER + MATTE LIP COLOR",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Lakme9to5Primer_MatteLipColorRedLetter_300x.jpg?v=1598243140",
+            price: 450,
+        },
+
+        {
+            name: "LAKME FOREVER MATTE LIQUID LIP COLOR",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24544_H-8901030758850_3e09b888-1276-44a2-9665-fa293cbd5d3_300x.jpg?v=1601470864",
+            price: 295,
+        }, {
+            name: "LAKME ABSOLUTE MATTE ULTIMATE LIP COLOR ",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeAbsoluteMatteUltimateLipColorwithArganOilPetalPink_41b560b6-3f0d-47b2-bfd5-075cf7bc0934_300x.jpg?v=1599200805",
+            price: 800,
+        }, {
+            name: "LAKME ABSOLUTE GEL STYLISH GEL NAIL COLOR",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Blackjack_300x.png?v=1598528925",
+            price: 250,
+        }, {
+            name: "LAKME EYECONIC KAJAL ",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeEyeconicKajalBlack_300x.jpg?v=1598358347",
+            price: 185,
+        }, {
+            name: "LAKME COLOR CRUSH NAIL ART",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/M1_300x.jpg?v=1601551574",
+            price: 155,
+        }, {
+            name: "LAKME 9 TO 5 CC COMPLEXION CARE CREAM",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Lakme9to5CCComplexionCareCream_9gmBeige_300x.jpg?v=1598101798",
+            price: 99,
+        }, {
+            name: "LAKME ABSOLUE SPOTLIGHT EYESHADOW",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/2-fop-smokin-glam_1_300x.jpg?v=1603894790",
+            price: 597,
+        }, {
+            name: "LAKME TRUE WEAR NAIL COLOR",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Pinks-N238_300x.jpg?v=1603185561",
+            price: 88,
+        }, {
+            name: "LAKME INSTA EYELINER",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24329_S1-8901030719165_300x.jpg?v=1633765701",
+            price: 130,
+        }, {
+            name: "LAKME 9 TO 5 PRIMER + MATTE PERFECT COVER ",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24451_S1-8901030742439_300x.jpg?v=1611755731",
+            price: 352,
+        }, {
+            name: "LAKME CUSHION MATTE",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24704_H-8901030776533_300x.jpg?v=1601452154",
+            price: 275,
+        },
+    ];
+
+    var body = document.querySelector("body");
+    var mainDiv = document.createElement("div");
+    mainDiv.setAttribute("id", "container");
+    body.append(mainDiv);
+    showProducts();
+
+    //MAPPING ITEMS
+    var product = JSON.parse(localStorage.getItem("cartItems"));
+    console.log("product:", product)
+    showProducts(product);
+    var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    function showProducts() {
+        data.map(function(item) {
+
+            var imageDiv = document.createElement("div");
+            var img = document.createElement("img");
+            img.setAttribute("src", item.image_url);
+
+            var p = document.createElement("p");
+            p.textContent = item.name;
+
+            var h2 = document.createElement("h2");
+            h2.textContent = "Rs." + item.price + ".00";
+
+            var h3 = document.createElement("h3");
+            h3.textContent = item.rating;
+
+            var btn = document.createElement("button");
+            btn.textContent = "ADD TO CART";
+            btn.addEventListener("click", function() {
+                addToCart(item);
+                alert("Product added into Cart SuccessFully")
+            });
+
+            imageDiv.append(img, p, h2, h3, btn);
+
+            mainDiv.append(imageDiv);
+
+        });
+    }
+
+    function addToCart(items) {
+        cart.push(items);
+
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+    }
+
+
+    document.getElementById("cart").addEventListener("click", function() {
+        window.location.href = "cart_project.html"
+    });
+
+
+
+    //Clear Filter Function
+    function clearFilter() {
+        delete newProductData;
+        location.reload();
+    }
+
+    function showSortFilter(arr) {
+
+        let priceFilter = document.getElementById("priceFilter");
+
+        for (let i = 0; i < priceFilter.length; i++) {
+
+            if (priceFilter.value == "low") {
+
+                //Sort Low to High Function
+                function sortLH() {
+                    let array = arr.sort((a, b) => a.price - b.price);
+                    showProducts(array);
+                }
+                sortLH();
+
+            } else if (priceFilter.value == "high") {
+
+                //Sort High to Low Function
+                function sortHL() {
+                    let array = arr.sort((a, b) => b.price - a.price);
+                    showProducts(array);
+                }
+                sortHL();
+            }
+        }
+
+    }
+
+    //Price sort Function
+    function priceSortFilter() {
+
+        if (newProductData.length != 0) {
+            showSortFilter(newProductData);
+        } else if (newProductData.length == 0) {
+            showSortFilter(data);
+        }
+
+    }
+</script>

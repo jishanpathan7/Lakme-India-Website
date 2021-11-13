@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart_project</title>
+    <link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/S/Salon_Ruj-logo-F9DD61D39F-seeklogo.com.png">
+    <link rel="stylesheet" href="lakmehome.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* #check {
+            width: 20%;
+            height: 40px;
+            background-color: black;
+            color: white;
+            border: 0;
+            margin-left: 10px;
+            margin-top: 50px;
+        } */
+        
+        #parent {
+            text-align: right;
+            display: grid;
+            height: 1000px;
+            justify-content: center;
+            grid-template-columns: 20% 20% 20%;
+            gap: 2%;
+        }
+        
+        #parent div {
+            margin-top: 20px;
+            border: 1px solid black;
+            text-align: center;
+            height: 500px;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+        
+        #parent div h4 {
+            font-size: 18px;
+            padding: 10px;
+            margin: 20px;
+        }
+        
+        #total {
+            margin: 20px;
+            border: 1px solid black;
+            width: 240px;
+        }
+        
+        #clear {
+            width: 30%;
+            margin-top: 3px;
+            padding: 10px;
+            height: 40px;
+            cursor: pointer;
+            border: 1px solid black;
+            font-weight: bold;
+            background: transparent;
+            cursor: pointer;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: black;
+        }
+        
+        #clear:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar page Start -->
+    <div class="banner">
+        <div class="navbar">
+            <div class="img">
+                <a href="lakmehome.html"><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="lakmehome.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="productpage.html">TRENDING NOW</a>
+                </li>
+
+                <li>
+                    <a href="Virtual_tryon.html">MAKEUP</a>
+                </li>
+
+                <li>
+                    <a href="sale.html">SALES</a>
+                </li>
+                <li>
+                    <a href="Virtual_tryon.html">FIND YOUR MATCH</a>
+                </li>
+                <li>
+                    <a href="#">TRENDS</a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/user/ILoveLakme" target="_blank">GET THE LOOK</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lakmeindia/" target="_blank">JOIN THE CLUB</a>
+                </li>
+                <li>
+                    <a href="Try_on_looks.html">MORE</a>
+                </li>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <a href="#"><img src="wishlist.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="user.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="search.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="shopping-bag.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Navbar page END -->
+
+    <div id="total"></div>
+    <h1 style="color:rgb(0, 0, 0)">CART PAGE</h1>
+
+    <div id="parent" class="adjustement">
+
+    </div>
+
+    <!-- Location and Contact Bar Start -->
+    <div class="box2">
+        <div>
+            <h3>STORE LOCATOR</h3>
+            <br><br>
+            <a href="#"><img src="location icon.png"></a>
+        </div>
+        <div id="line"></div>
+        <div>
+            <h3>GET IN TOUCH</h3>
+
+            <a href="tel:1800-313-9293" target="_blank"><img src="telephone.png">Call</a>
+            <a href="https://api.whatsapp.com/send/?phone=919137630020" target="_blank"><img src="comment.png">Chat</a>
+            <a href="support@lakmeindia.com" target="_blank"><img src="email.png">Email</a>
+        </div>
+    </div>
+    <!-- Location and Contact Bar End -->
+
+
+    <!-- START FOOTER DIV -->
+    <footer class="footer">
+        <div class="div1">
+            <div class="social">
+                <div class="img">
+                    <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+                </div>
+                <p>FOLLOW LATEST UPDATES & NEW LAUNCHES</p>
+
+                <a href="https://www.facebook.com/lakme" target="_blank"><img src="facebook.png"></a>
+                <a href="https://www.instagram.com/lakmeindia/" target="_blank"><img src="instagram.png"></a>
+                <a href="https://www.youtube.com/user/ILoveLakme" target="_blank"><img src="youtube.png"></a>
+
+            </div>
+            <div class="div2">
+                <div id="one">
+                    <div>
+                        <h4>CONTACT US</h4>
+                        <br> support@lakmeindia.com
+                        <br> 1800-313-9293<br>Mon- Sat, am to 7 pm
+                    </div>
+                    <div>
+                        <br>
+                        <h4>ABOUT US</h3>
+                            <p>
+                                The contemporary Indian beauty expert - Lakmé continuously innovates to offer a wide range of high performance and world class cosmetics and skincare products that have earned recognition from the People for the Ethical Treatment of Animals (PETA). We,
+                                at Lakme, combine international cosmetic technology with an in-depth understanding of the Indian woman’s needs and offer a comprehensive beauty experience to our customers through products that are ideal for a variety of
+                                Indian skin tones. Lakmé was the country's first cosmetic brand to introduce makeup to Indian women and takes pride in being the expert on Indian Beauty for over 50 years. We also take immense pride in being a compassionate
+                                beauty brand which is why we do not believe in or support testing on animals. Our bond with beauty and fashion goes beyond skincare & makeup hence it is manifested through the renowned Lakmé Fashion Week, which is now the
+                                largest fashion event of its kind in the country that celebrates the beauty of fashion.
+                            </p>
+                    </div>
+                </div>
+                <div id="two">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li>
+
+                            <a href="https://api.whatsapp.com/send/?phone=919137630020">Beauty Consultation</a>
+                        </li>
+                        <li>
+                            <a href="FAQ.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="tel:1800-313-9293">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="lakmehome.html ">Track Order</a>
+                        </li>
+
+                        <li>
+                            <a href="lakmehome.html ">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="terms.html">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="three ">
+                    <h2>Need Help?</h2>
+                    <div>
+                        <p>Email Us:<br>support@lakmeindia.com</p>
+                        <br>
+                        <p>Call Us:<br>1800-313-9293</p>
+                        <br>
+                        <p>Working Timing:<br>Mon - Sat , 9 am to 7 pm</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="lastline ">
+                <hr> </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    console.log("cartItems:", cartItems);
+    let parent = document.getElementById("parent");
+
+    displayItem(cartItems);
+    var addItemId = 0;
+
+    function displayItem(product) {
+        addItemId += 1;
+        product.map(function(item) {
+            var div = document.createElement("div");
+            div.setAttribute("id", "main");
+            var h4 = document.createElement("h4");
+            h4.textContent = item.name;
+
+            var h3 = document.createElement("h3");
+            h3.textContent = item.rating;
+
+            var img = document.createElement("img");
+            img.setAttribute("src", item.image_url);
+
+            var h5 = document.createElement("h5");
+            h5.textContent = "Rs." +
+                item.price + ".00";
+            var delBtn = document.createElement("button");
+            delBtn.setAttribute("id", "clear")
+            delBtn.innerText = "Delete";
+            delBtn.setAttribute('onclick', 'del(' + addItemId + ')');
+            div.append(h4, h3, img, h5, delBtn);
+            parent.append(div);
+        });
+
+
+    }
+
+    function del(item) {
+        document.getElementById("main").remove();
+    }
+    document.getElementById("check").addEventListener("click", function() {
+        window.location.href = "checkoutpage.html"
+    });
+
+    var total = cartItems.reduce(function(acc, cv) {
+        console.log(cv);
+
+        return acc + Number(cv.price);
+
+    }, 0);
+
+    console.log(total);
+
+    document.querySelector("#total").innerHTML = `<h3>Total cost: ${total + ".00"} Rs.</h3>`;
+</script>
