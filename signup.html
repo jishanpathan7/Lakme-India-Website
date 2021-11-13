@@ -18,9 +18,14 @@
         #m,
         #p {
             margin: auto;
-            width: 9%;
+            width: 40%;
             height: 40px;
             margin: 7px;
+        }
+        
+        .main {
+            margin: auto;
+            width: 50%;
         }
         
         #submit {
@@ -77,24 +82,24 @@
 <body>
 
     <h1>CREATE YOUR ACCOUNT</h1>
+    <div class="main">
+        <form id="myform" onsubmit="signup(event)">
+            <table>
+                <input type="text" id="n" class="inputBoxDesign" placeholder="enter your name" required>
+                <span id="username" class="red"></span>
 
-    <form id="myform" onsubmit="signup(event)">
-        <table>
-            <input type="text" id="n" class="inputBoxDesign" placeholder="enter your name" required>
-            <span id="username" class="red"></span>
+                <input type="text" id="e" class="inputBoxDesign" placeholder="enter your email *" required>
+                <span id="email" class="red"></span>
 
-            <input type="text" id="e" class="inputBoxDesign" placeholder="enter your email *" required>
-            <span id="email" class="red"></span>
+                <input type="number" id="m" class="inputBoxDesign" placeholder="mobile *">
+                <span id="mobile" class="red"></span>
 
-            <input type="number" id="m" class="inputBoxDesign" placeholder="mobile *">
-            <span id="mobile" class="red"></span>
+                <input type="password" id="p" class="inputBoxDesign" placeholder="enter your password *" required>
+                <span id="password" class="red"></span>
 
-            <input type="password" id="p" class="inputBoxDesign" placeholder="enter your password *" required>
-            <span id="password" class="red"></span>
-
-            <input type="submit" value="CREATE MY ACCOUNT" id="submit" name="submit" />
-        </table>
-    </form>
+                <input type="submit" value="CREATE MY ACCOUNT" id="submit" name="submit" />
+            </table>
+        </form>
     </div>
 
 
