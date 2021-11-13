@@ -1,11 +1,11 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 .navbar {
     background: #1a1a1a;
     height: 80px;
@@ -22,7 +22,7 @@
 
 .navbar ul {
     display: flex;
-    margin-left: 22%;
+    margin-left: 30%;
 }
 
 .navbar ul li {
@@ -32,7 +32,7 @@
     margin-bottom: 20px;
     margin-top: -20px;
     position: relative;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .navbar ul li a {
@@ -55,229 +55,238 @@
 .navbar ul li:hover::after {
     width: 100%;
 }
+
 .icons {
- display: flex;
- justify-content: end;
- margin-bottom: 50px;
- margin-right: 40px;
- margin-top: -0px;
- list-style: none;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 50px;
+    margin-right: 40px;
+    margin-top: -0px;
+    list-style: none;
 }
 
 .icons a img {
- color: white;
- height: 25px;
- width: 25px;
- margin-left: 20px;
- margin-top: -20px;
- margin-bottom: 30px;
+    color: white;
+    height: 25px;
+    width: 25px;
+    margin-left: 20px;
+    margin-top: -30px;
+    margin-bottom: 30px;
 }
 
 .icons li a {
-display: inline-block;
-filter: invert(1);
-transform: scale(0.9);
+    display: inline-block;
+    filter: invert(1);
+    transform: scale(0.9);
 }
-#content{
-/* border:1px solid red; */
-width:300px;
-height:30px;
-margin-left:200px;
-margin-top:100px;
-display:inline-block;
-}
-#content1{
-/* border:1px solid red; */
-width:200px;
-height:60px;
-margin-left:700px;
-margin-top:100px;
-display:inline-block;
-}
-#wishlist{
-font-size:20px;
-margin-left:25px; 
-}
-#btn{
-width:200px;
-height:50px;
-background-color:rgb(204, 58, 58); 
-border-radius:3px;
-font-size:20px;
 
+#content {
+    /* border:1px solid red; */
+    width: 300px;
+    height: 30px;
+    margin-left: 200px;
+    margin-top: 100px;
+    display: inline-block;
 }
-#dropbox{
-width:1200px;
-height: 50px;
-margin-left:220px;
-margin-top:10px;
-background-color: whitesmoke;
-outline:none;
-border:none;
-text-align:left;
-color:black;
-}
-#hidden{
-border:1px solid blue;
-width:1000px; 
-height:100px;
-margin-left:280px;
-margin-top:10px;
-background-color: whitesmoke;
-outline:none;
-border:none;
-}
-#hidden1{
-border:1px solid blue;
-width:200px; 
-height:70px;
-margin-left:130px;
-margin-top:1000px;
-text-align:center;
-padding:20px;
 
+#content1 {
+    /* border:1px solid red; */
+    width: 200px;
+    height: 60px;
+    margin-left: 700px;
+    margin-top: 100px;
+    display: inline-block;
 }
-#parent{
-border:1px solid blue;
-width:1200px; 
-height:400px;
-margin-left:100px;
-margin-top:2px;
-/* background-color: red; */
+
+#wishlist {
+    font-size: 20px;
+    margin-left: 25px;
 }
+
+#btn {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(236, 91, 91);
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+#dropbox {
+    width: 1200px;
+    height: 50px;
+    margin-left: 220px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    outline: none;
+    border: none;
+    text-align: left;
+    color: black;
+}
+
+#hidden {
+    border: 1px solid blue;
+    width: 1000px;
+    height: 100px;
+    margin-left: 280px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    outline: none;
+    border: none;
+}
+
+#hidden1 {
+    border: 1px solid blue;
+    width: 200px;
+    height: 70px;
+    margin-left: 130px;
+    margin-top: 1000px;
+    text-align: center;
+    padding: 20px;
+}
+
+#parent {
+    border: 1px solid blue;
+    width: 1200px;
+    height: 400px;
+    margin-left: 100px;
+    margin-top: 2px;
+    /* background-color: red; */
+}
+
 .box2 {
-border: 1px solid black;
-display: flex;
-height: 100px;
-justify-content: center;
-align-items: center;
-background-color: #f2f2f2;
-margin-top: 200px;
-margin-left: 10px;
+    border: 1px solid black;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    margin-top: 200px;
 }
 
 .box2 div {
-display: flex;
-width:500px;
-height:100px;
-margin-left: 170px;
-margin-right:200px;
-/* border:1px solid yellow; */
-margin-top:50px;
-gap:7px;
-
+    display: flex;
+    width: 500px;
+    height: 100px;
+    margin-left: 170px;
+    margin-right: 200px;
+    /* border:1px solid yellow; */
+    margin-top: 50px;
+    gap: 7px;
 }
-div h3{
-margin-top:10px;
-color:black;
-text-align:left;
+
+div h3 {
+    margin-top: 10px;
+    color: black;
+    text-align: left;
 }
 
 .box2 a {
-color: black;
-text-align: right;
-text-decoration: none;
+    color: black;
+    text-align: right;
+    text-decoration: none;
 }
 
 .box2 a img {
-display: flex;
-flex-direction: column;
-height: 30px;
-margin: 10px;
-margin-left: 35px;
-width: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    margin: 10px;
+    margin-left: 35px;
+    width: 30px;
 }
 
 #line {
-border: 0.5px solid rgb(80, 74, 74);
-width: 1px;
-height: 70px;
-margin: 10px;
-margin-right: -80px;
+    border: 0.5px solid rgb(80, 74, 74);
+    width: 1px;
+    height: 70px;
+    margin: 10px;
+    margin-right: -80px;
 }
 
 .footer {
-width: 100%;
-height: 700px;
-border: 1px solid white;
-background-color: black;
-
+    width: 100%;
+    height: 700px;
+    border: 1px solid white;
+    background-color: black;
 }
 
 .div1 {
-border: 1px solid red;
-width: 100%;
-height: 700px;
+    width: 100%;
+    height: 700px;
 }
 
 .social {
-/* border: 1px solid white; */
-width: 1743px;
-height: 75px;
-margin-left: 40px;
-margin-top: 60px;
-display: flex;
-color: white;
+    /* border: 1px solid white; */
+    width: 1743px;
+    height: 75px;
+    margin-left: 40px;
+    margin-top: 60px;
+    display: flex;
+    color: white;
 }
 
 .social p {
-display: flex;
-gap: 10px;
-margin-left: 20px;
-margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 .social img {
-margin-top: 10px;
-margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .social a img {
-display: flex;
-height: 50px;
-width: 50px;
+    display: flex;
+    height: 50px;
+    width: 50px;
 }
 
 .social .img img {
-margin-top: 10px;
-cursor: pointer;
-margin-left: 30px;
-width: 120px;
-height: 35px;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 30px;
+    width: 120px;
+    height: 35px;
 }
-.downtext1{
-/* border:1px solid white; */
-width:50%;
-height:500px;
-color:white;
-line-height:1.5;
-font-size:14px;
-margin-left:40px;
-margin-top:30px;
-display:inline-block;
+
+.downtext1 {
+    /* border:1px solid white; */
+    width: 50%;
+    height: 500px;
+    color: white;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-left: 40px;
+    margin-top: 30px;
+    display: inline-block;
 }
-.downright{
-/* border:1px solid red; */
-width:40%;
-height:400px;
-color:white;
-margin-left:40px;
-display:inline-block;
-font-family: Futura,sans-serif;
+
+.downright {
+    /* border:1px solid red; */
+    width: 40%;
+    height: 400px;
+    color: white;
+    margin-left: 40px;
+    display: inline-block;
+    font-family: Futura, sans-serif;
 }
-#help{
-/* border:1px solid red; */
-width:25%;
-height:300px;
-margin-left:40px;
-margin-top:20px;
-display:inline-block;
+
+#help {
+    /* border:1px solid red; */
+    width: 25%;
+    height: 300px;
+    margin-left: 40px;
+    margin-top: 20px;
+    display: inline-block;
 }
-#needhelp{
-/* border:1px solid red; */
-width:30%;
-height:300px;
-margin-left:200px;
-margin-top:20px;
-display:inline-block;
+
+#needhelp {
+    /* border:1px solid red; */
+    width: 30%;
+    height: 300px;
+    margin-left: 200px;
+    margin-top: 20px;
+    display: inline-block;
 }
