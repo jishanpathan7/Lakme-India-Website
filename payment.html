@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="lakmehome.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            margin: 0px;
+        }
+        
+        #container {
+            width: 1200px;
+            height: 800px;
+            margin: auto;
+            display: flex;
+        }
+        
+        #leftBox {
+            width: 60%;
+            height: 500px;
+        }
+        
+        #paymentHeading {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 2% 0% 0% 2%;
+        }
+        
+        .subHead {
+            margin: 2% 0% 4% 2%;
+            font-size: 16px;
+            color: rgb(53, 50, 50);
+        }
+        
+        #cardDetails {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        #creditOptionBox {
+            width: 100%;
+            height: 75%;
+            border-bottom: 1px solid rgb(124, 121, 121);
+        }
+        
+        .creditcardBtn {
+            margin-left: 10px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #999;
+            transition: 0.2s all linear;
+            margin-right: 5px;
+            position: relative;
+            top: 4px;
+        }
+        
+        .creditcardBtn:checked {
+            border: 6px solid black;
+        }
+        
+        #codBtn {
+            margin-left: 10px;
+            margin-top: 30px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #999;
+            transition: 0.2s all linear;
+            margin-right: 5px;
+            position: relative;
+            top: 4px;
+        }
+        
+        #codBtn:checked {
+            border: 6px solid black;
+        }
+        
+        .creditCardOption {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        #cardNumber {
+            width: 80%;
+            height: 40px;
+            margin: 3%;
+            padding-left: 10px;
+        }
+        
+        #cardName {
+            width: 80%;
+            height: 40px;
+            margin: 3%;
+            padding-left: 10px;
+        }
+        
+        #cardDate {
+            width: 36%;
+            height: 40px;
+            margin: 3%;
+            padding-left: 10px;
+        }
+        
+        #cvv {
+            width: 36%;
+            height: 40px;
+            padding-left: 10px;
+            margin: 3%;
+        }
+        
+        #submitBtn {
+            width: 50%;
+            margin-top: 50px;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: rgb(53, 51, 51);
+            color: white;
+            text-align: center;
+            font-weight: 600;
+            cursor: pointer;
+            font-style: normal;
+        }
+        
+        #rightBox {
+            width: 40%;
+            height: 500px;
+            margin-left: 40px;
+        }
+        
+        .orderSummary {
+            width: 80%;
+            height: 200px;
+            margin-top: 20px;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(216, 209, 209);
+        }
+        
+        .orderHeading {
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 5%;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        
+        .orderDetails {
+            width: 80%;
+            height: 500px;
+            margin-top: 20px;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(216, 209, 209);
+        }
+        
+        #orderSummary,
+        #orderDetails {
+            width: 75%;
+            min-height: 200px;
+            margin-top: 20px;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(231, 226, 226);
+        }
+        
+        #orderDetails {
+            border: 0px solid rgb(255, 255, 255);
+            border-top: 1px solid rgb(216, 209, 209);
+        }
+        
+        .orderHeading {
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 5%;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .orderHeadingDetails {
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 5%;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+        
+        .orderSumStyle {
+            padding: 5px;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        
+        .orderSumTotalPrice {
+            padding: 5px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        .productDetails {
+            height: 130px;
+            display: flex;
+            margin: 1%;
+            border-bottom: 1px solid rgb(216, 209, 209);
+        }
+        
+        .productImgDiv {
+            width: 30%;
+        }
+        
+        .productDetailsDiv {
+            width: 60%;
+        }
+        
+        .productDetailsDesc {
+            font-size: 12px;
+            color: black;
+            margin: 2%;
+        }
+        
+        a {
+            color: black;
+        }
+        
+        .deliveryConstants>p {
+            margin: 1px auto;
+            color: #898c91;
+            font-size: 14px;
+        }
+        
+        .extraDetails {
+            border: 1px solid #BDBDBD;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="img">
+                <a href="lakmehome.html"><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="lakmehome.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="productpage.html">TRENDING NOW</a>
+                </li>
+
+                <li>
+                    <a href="VirtualTry.html">MAKEUP</a>
+                </li>
+
+                <li>
+                    <a href="sale.html">SALES</a>
+                </li>
+                <li>
+                    <a href="VirtualTry.html">FIND YOUR MATCH</a>
+                </li>
+                <li>
+                    <a href="#">TRENDS</a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/user/ILoveLakme" target="_blank">GET THE LOOK</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lakmeindia/" target="_blank">JOIN THE CLUB</a>
+                </li>
+                <li>
+                    <a href="#">MORE</a>
+                </li>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <a href="#"><img src="wishlist.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="user.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="search.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="shopping-bag.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="container">
+
+        <div id="leftBox">
+            <div id="paymentHeading">PAYMENT METHOD</div>
+            <div class="subHead">All transactions are safe and secure</div>
+            <hr>
+
+            <div id="cardDetails">
+
+                <div id="creditOptionBox">
+                    <input onchange="showCredit()" type="radio" id="cardBtn" class="creditcardBtn" name="payment" value="creditCard" checked>
+                    <label for="creditCard" class="creditCardOption">Credit/Debit Card</label>
+                    <div id="showCCOption">
+                        <input type="text" id="cardNumber" placeholder="Card Number">
+                        <input type="text" id="cardName" placeholder="Name On Card">
+                        <input type="text" id="cardDate" placeholder="MM / YY">
+                        <input type="number" id="cvv" placeholder="CVV">
+                    </div>
+                </div>
+
+                <div class="codOptionBox">
+                    <input onchange="selectCod()" type="radio" id="codBtn" name="payment" value="cod">
+                    <label for="cod" class="creditCardOption">Cash on Delivery</label>
+                    <button id="submitBtn" onclick="payment()">REVIEW AND PAY</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="rightBox">
+
+            <div id="orderSummary">
+                <div class="orderHeading">ORDER SUMMARY</div>
+
+                <table id="orderSummeryTable">
+                    <tr>
+                        <td id="item" class="orderSumStyle"></td>
+                        <td id="totalPrice1" class="orderSumStyle"></td>
+                    </tr>
+                    <tr>
+                        <td class="orderSumStyle">DELIVERY</td>
+                        <td id="delivery" class="orderSumStyle"></td>
+                    </tr>
+                    <tr>
+                        <td class="orderSumStyle"> <strong>TOTAL</strong><br>(Inclusive of all taxes)</td>
+                        <td id="totalPrice2"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="orderDetails">
+                <div class="orderHeading, orderHeadingDetails">ORDER DETAILS</div>
+                <div id="display"></div>
+                <div id="displayShippingDetails"></div>
+                <div class="extraDetails">
+                    <h3>DELIVERY OPTION</h3>
+                    <div class="deliveryConstants">
+                        <p>Standard Delivery</p>
+                        <p>within 3-9 Business Days</p>
+                        <p>FREE</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Location and Contact Bar Start -->
+    <div class="box2">
+        <div>
+            <h3>STORE LOCATOR</h3>
+            <br><br>
+            <a href="#"><img src="location icon.png"></a>
+        </div>
+        <div id="line"></div>
+        <div>
+            <h3>GET IN TOUCH</h3>
+
+            <a href="tel:1800-313-9293" target="_blank"><img src="telephone.png">Call</a>
+            <a href="https://api.whatsapp.com/send/?phone=919137630020" target="_blank"><img src="comment.png">Chat</a>
+            <a href="support@lakmeindia.com" target="_blank"><img src="email.png">Email</a>
+        </div>
+    </div>
+    <!-- Location and Contact Bar End -->
+
+
+    <!-- START FOOTER DIV -->
+    <footer class="footer">
+        <div class="div1">
+            <div class="social">
+                <div class="img">
+                    <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+                </div>
+                <p>FOLLOW LATEST UPDATES & NEW LAUNCHES</p>
+
+                <a href="https://www.facebook.com/lakme" target="_blank"><img src="facebook.png"></a>
+                <a href="https://www.instagram.com/lakmeindia/" target="_blank"><img src="instagram.png"></a>
+                <a href="https://www.youtube.com/user/ILoveLakme" target="_blank"><img src="youtube.png"></a>
+
+            </div>
+            <div class="div2">
+                <div id="one">
+                    <div>
+                        <h4>CONTACT US</h4>
+                        <br> support@lakmeindia.com
+                        <br> 1800-313-9293<br>Mon- Sat, am to 7 pm
+                    </div>
+                    <div>
+                        <br>
+                        <h4>ABOUT US</h3>
+                            <p>
+                                The contemporary Indian beauty expert - Lakmé continuously innovates to offer a wide range of high performance and world class cosmetics and skincare products that have earned recognition from the People for the Ethical Treatment of Animals (PETA). We,
+                                at Lakme, combine international cosmetic technology with an in-depth understanding of the Indian woman’s needs and offer a comprehensive beauty experience to our customers through products that are ideal for a variety of
+                                Indian skin tones. Lakmé was the country's first cosmetic brand to introduce makeup to Indian women and takes pride in being the expert on Indian Beauty for over 50 years. We also take immense pride in being a compassionate
+                                beauty brand which is why we do not believe in or support testing on animals. Our bond with beauty and fashion goes beyond skincare & makeup hence it is manifested through the renowned Lakmé Fashion Week, which is now the
+                                largest fashion event of its kind in the country that celebrates the beauty of fashion.
+                            </p>
+                    </div>
+                </div>
+                <div id="two">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li>
+
+                            <a href="https://api.whatsapp.com/send/?phone=919137630020">Beauty Consultation</a>
+                        </li>
+                        <li>
+                            <a href="FAQ.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="tel:1800-313-9293">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="lakmehome.html ">Track Order</a>
+                        </li>
+
+                        <li>
+                            <a href="lakmehome.html ">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="terms.html">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="three ">
+                    <h2>Need Help?</h2>
+                    <div>
+                        <p>Email Us:<br>support@lakmeindia.com</p>
+                        <br>
+                        <p>Call Us:<br>1800-313-9293</p>
+                        <br>
+                        <p>Working Timing:<br>Mon - Sat , 9 am to 7 pm</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="lastline ">
+                <hr> </div>
+    </footer>
+
+
+    <script>
+        let cod = document.getElementById("codBtn");
+        let card = document.getElementById("cardBtn");
+        let cardDetails = document.getElementById("showCCOption");
+        let newCardDet = cardDetails.innerHTML;
+        let cardBox = document.getElementById("creditOptionBox");
+
+        function selectCod() {
+            console.log("Working for cod");
+            console.log(cardDetails.innerHTML);
+            cardDetails.innerHTML = null;
+            cardBox.style.height = "10%";
+        }
+
+        function showCredit() {
+            console.log("Working for card");
+            console.log(newCardDet);
+            cardDetails.innerHTML = newCardDet;
+            cardBox.style.height = "75%";
+        }
+
+        function checkNumbers(input, specialVal) {
+            let inputNum = input.value;
+            let flag = true;
+
+            for (let i = 0; i < inputNum.length; i++) {
+                if ((inputNum[i] == "0") || (inputNum[i] == "1") || (inputNum[i] == "2") || (inputNum[i] == "3") ||
+                    (inputNum[i] == "4") || (inputNum[i] == "5") || (inputNum[i] == "6") || (inputNum[i] == "7") ||
+                    (inputNum[i] == "8") || (inputNum[i] == "9") || (inputNum[i] == specialVal)) {
+                    continue;
+                } else {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+
+        function checkSlash(val) {
+            let count = 0;
+            for (let i = 0; i < val.length; i++) {
+                if (val[i] == "/") {
+                    count++;
+                }
+            }
+            if (count == 1) {
+                return true;
+            } else if (count == 0 || count >= 2) {
+                console.log(count);
+                return false;
+            }
+        }
+
+        function checkChar(val) {
+            let correctchar = /^[A-Za-z]+$/;
+            let charCount = 0;
+            let spaceCount = 0;
+
+            for (let i = 0; i < val.length; i++) {
+                if (val[i].match(correctchar)) {
+                    charCount++;
+                }
+                if (val[i] == " ") {
+                    spaceCount++;
+                }
+            }
+
+            if ((charCount != 0 && spaceCount != 0) || (charCount != 0 && spaceCount == 0)) {
+                return true;
+            } else if (charCount == 0 && spaceCount != 0) {
+                return false;
+            }
+        }
+
+        var cardNum = document.getElementById("cardNumber");
+        var cardNam = document.getElementById("cardName");
+        var monYear = document.getElementById("cardDate");
+        var cvvDet = document.getElementById("cvv");
+        var correctchar = /^[A-Za-z]+$/;
+
+        function payment() {
+
+            if (cod.checked) {
+                let interval = setTimeout(function() {
+                    alert("Your order has been placed succesfully. Happy Shopping!");
+                    window.location.href = "lakmehome.html";
+                }, 2000);
+            }
+
+            if (card.checked) {
+
+                if (cardNum.value == "" || cardNam.value == "" || monYear.value == "" || cvvDet.value == "") {
+                    alert("Please fill in all the details");
+                } else if (cardNum.value.length != 19) {
+                    alert("Enter valid 16 digit Card Number");
+                } else if (checkNumbers(cardNum, " ") == false) {
+                    alert("Enter valid Card number with numbers and spaces");
+                } else if (checkChar(cardNam.value) == false) {
+                    alert("Enter valid name");
+                } else if (monYear.value.length != 5) {
+                    alert("Enter valid 4 digit Expiry Date");
+                } else if (checkNumbers(monYear, "/") == false) {
+                    alert("Enter valid Expiry Date");
+                } else if (checkSlash(monYear.value) == false) {
+                    alert("Enter valid Expiry Date");
+                } else if (cvvDet.value.length != 3) {
+                    alert("Enter three digit CVV number");
+                } else {
+                    let interval = setTimeout(function() {
+                        alert("Your order has been placed succesfully. Happy Shopping!");
+                        window.location.href = "adidas_home_page.html";
+                    }, 2000);
+                }
+
+            }
+
+        }
+
+
+        let checkoutData = JSON.parse(localStorage.getItem("checkout"));
+        let key = checkoutData.length - 1;
+        let ti = checkoutData[key].totalItem;
+        let tp = checkoutData[key].totalPrice;
+
+        document.getElementById("item").textContent = ti + " " + "ITEM";
+        document.getElementById("delivery").textContent = checkoutData[key].delivery
+        document.getElementById("totalPrice1").textContent = "₹" + tp + ".00";
+
+        document.getElementById("totalPrice2").setAttribute("class", "orderSumTotalPrice");
+
+        if (checkoutData[key].delivery != "Free") {
+
+            tp = tp + 50
+            document.getElementById("totalPrice2").textContent = "₹" + tp + ".00";
+        } else {
+            document.getElementById("totalPrice2").textContent = "₹" + tp + ".00";
+        }
+
+
+        let DAR1 = JSON.parse(localStorage.getItem("DAR"))
+
+        let parent = document.getElementById("display")
+        parent.style = "margin-top :10% ; display :grid;gap :0px"
+
+        DAR1.forEach(function(product) {
+
+            let div = document.createElement("div");
+            div.setAttribute("class", "productDetails");
+
+            let div1 = document.createElement("div");
+            div1.setAttribute("class", "productImgDiv");
+
+            let image = document.createElement("img");
+            image.src = product.img[3];
+            image.style.width = "100%";
+
+            div1.append(image);
+
+            let div2 = document.createElement("div");
+            div2.setAttribute("class", "productDetailsDiv");
+
+            let name = document.createElement("div");
+            name.setAttribute("class", "productDetailsDesc");
+            name.textContent = product.name;
+            name.style.width = "100%";
+
+            let color = document.createElement("div");
+            color.setAttribute("class", "productDetailsDesc");
+            color.textContent = "COLOR :" + product.color[0];
+
+            let size = document.createElement("div");
+            size.setAttribute("class", "productDetailsDesc");
+            size.textContent = "SIZE : " + product.size;
+
+            let price = document.createElement("div");
+            price.setAttribute("class", "productDetailsDesc");
+            price.textContent = "₹" + product.price;
+
+            div2.append(name, color, size, price)
+
+            div.append(div1, div2)
+
+            parent.append(div)
+
+        });
+
+
+        let shippingDetails = JSON.parse(localStorage.getItem("shipping"));
+
+        console.log(shippingDetails);
+
+        function displayShipping() {
+
+            let displayShippingDetails = document.getElementById("displayShippingDetails");
+
+            let h3 = document.createElement("h3");
+            h3.textContent = "DELIVERY ADDRESS";
+
+            let name = document.createElement("p");
+            name.textContent = shippingDetails[0].firstname + " " + shippingDetails[0].lastname;
+            name.style = "font-size: 14px; color: #424242"
+
+            let streetAddress = document.createElement("p");
+            streetAddress.textContent = shippingDetails[0].street;
+            streetAddress.style = "font-size: 14px; color: #424242"
+
+            let cityAddress = document.createElement("p");
+            cityAddress.textContent = shippingDetails[0].city + ", " + shippingDetails[0].state + ", " + shippingDetails[0].pincode;
+            cityAddress.style = "font-size: 14px; color: #424242"
+
+            displayShippingDetails.append(h3, name, streetAddress, cityAddress);
+
+            displayShippingDetails.style = "border:1px solid #BDBDBD; margin: 10px 0px; padding: 10px"
+
+        }
+        displayShipping();
+    </script>
+
+</body>
+
+</html>
