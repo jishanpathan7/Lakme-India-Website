@@ -16,15 +16,25 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
-        /* #check {
+        
+        #check {
             width: 20%;
             height: 40px;
             background-color: black;
             color: white;
             border: 0;
+            cursor: pointer;
             margin-left: 10px;
+            font-size: 20px;
             margin-top: 50px;
-        } */
+        }
+        
+        #h1 {
+            border: 1px solid black;
+            text-align: center;
+            width: 300px;
+            margin: auto;
+        }
         
         #parent {
             text-align: right;
@@ -55,6 +65,7 @@
             border: 1px solid black;
             color: black;
             width: 240px;
+            height: 50px;
         }
         
         #clear {
@@ -141,14 +152,14 @@
         </div>
     </div>
     <!-- Navbar page END -->
-
-    <div id="total">Total</div>
-    <h1 style="color:rgb(0, 0, 0)">CART PAGE</h1>
+    <button id="check">CHECKOUT</button>
+    <h1 id="h1" style="color:rgb(0, 0, 0)">LAKME CART</h1>
 
     <div id="parent" class="adjustement">
 
     </div>
 
+    <div id="total"></div>
     <!-- Location and Contact Bar Start -->
     <div class="box2">
         <div>
@@ -286,6 +297,7 @@
     function del(item) {
         document.getElementById("main").remove();
     }
+
     document.getElementById("check").addEventListener("click", function() {
         window.location.href = "checkoutpage.html";
     });
@@ -299,5 +311,5 @@
 
     console.log(total);
 
-    document.querySelector("#total").innerHTML = `<h3>Total cost: ${total + ".00"} Rs.</h3>`;
+    document.getElementById("total").innerHTML = `<h3>Total cost: ${total + ".00"} Rs.</h3>`;
 </script>
