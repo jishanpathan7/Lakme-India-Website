@@ -1,0 +1,112 @@
+#countainer {
+  width: 100%;
+  border: 1px solid blue;
+  background: url(https://cdn.shopify.com/s/files/1/0014/3514/0183/files/Makeup_trendspng.png?v=1606709794);
+  height: 400px;
+}
+#countainer > h1 {
+  text-align: center;
+  margin-top: 150px;
+  color: white;
+}
+#box {
+  display: flex;
+  width: 96%;
+  margin-left: 30px;
+  /* border: 1px solid blue; */
+}
+#box2 {
+  display: flex;
+  width: 96%;
+  margin-top: 80px;
+  margin-left: 20px;
+}
+#box3 {
+  display: flex;
+  width: 96%;
+  margin-top: 80px;
+  margin-left: 20px;
+  /* border: 1px solid blue; */
+}
+#box4 {
+  display: flex;
+  width: 96%;
+  margin-top: 80px;
+  margin-left: 20px;
+  /* border: 1px solid blue; */
+}
+#trends {
+  margin: auto;
+  display: flex;
+}
+.h1 {
+  margin-left: 30px;
+  font-size: 25px;
+  color: #454545;
+}
+#makeup {
+  margin-left: 330px;
+}
+.img1 {
+  /* border: 1px solid red; */
+  width: 90%;
+  height: 200px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.img2 {
+  /* border: 1px solid red; */
+  width: 90%;
+  height: 200px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.img3 {
+  /* border: 1px solid red; */
+  width: 90%;
+  height: 200px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.img4 {
+  /* border: 1px solid red; */
+  width: 90%;
+  height: 200px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.box1 {
+  /* border: 1px solid blue; */
+  margin-left: 20px;
+  width: 32%;
+}
+.box2 {
+  /* border: 1px solid blue; */
+  margin-left: 20px;
+  width: 32%;
+}
+.box3 {
+  /* border: 1px solid blue; */
+  margin-left: 20px;
+  width: 32%;
+}
+.box4 {
+  /* border: 1px solid blue; */
+  margin-left: 20px;
+  width: 32%;
+}
+h4 {
+  font-size: 20px;
+  margin-left: 10px;
+}
+p {
+  font-size: 12px;
+  margin-left: 10px;
+}
+button {
+  margin-left: 10px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
