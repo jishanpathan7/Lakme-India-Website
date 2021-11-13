@@ -1,167 +1,140 @@
-.banner {
-  background-size: cover;
-  background-position: center;
-}
-
-.navbar {
-  background: #1a1a1a;
-  height: 80px;
-  border: 1px solid rgb(66, 66, 66);
-  width: 100%;
-  margin: auto;
-}
-.navbar ul {
-  display: flex;
-  margin-left: 22%;
-}
-
-.navbar ul li {
-  list-style: none;
-  display: inline-block;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  margin-top: -20px;
-  position: relative;
-  font-size: 12px;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-}
-
-.navbar ul li::after {
-  content: "";
-  height: 2px;
-  width: 0;
-  background: #fff;
-  position: absolute;
-  left: 0;
-  bottom: -17px;
-  transition: 0.3s;
-}
-
-.navbar ul li:hover::after {
-  width: 100%;
-}
 #countainer {
-  width: 100%;
-  border: 1px solid blue;
-  background: url(https://cdn.shopify.com/s/files/1/0014/3514/0183/files/Makeup_trendspng.png?v=1606709794);
-  height: 400px;
-  margin-top: 20px;
+    width: 100%;
+    border: 1px solid blue;
+    background: url(https://cdn.shopify.com/s/files/1/0014/3514/0183/files/Makeup_trendspng.png?v=1606709794);
+    height: 400px;
+    margin-top: 20px;
 }
-#countainer > h1 {
-  text-align: center;
-  margin-top: 150px;
-  color: white;
+
+#countainer>h1 {
+    text-align: center;
+    margin-top: 150px;
+    color: white;
 }
+
 #box {
-  display: flex;
-  width: 95%;
-  margin-left: 30px;
-  /* border: 1px solid blue; */
+    display: flex;
+    width: 95%;
+    margin-left: 30px;
+    /* border: 1px solid blue; */
 }
+
 #Text {
-  height: 80%;
-  width: 100%;
+    height: 80%;
+    width: 100%;
 }
 
 #box2 {
-  display: flex;
-  width: 95%;
-  margin-top: 80px;
-  margin-left: 20px;
+    display: flex;
+    width: 95%;
+    margin-top: 80px;
+    margin-left: 20px;
 }
+
 #box3 {
-  display: flex;
-  width: 95%;
-  margin-top: 80px;
-  margin-left: 20px;
-  /* border: 1px solid blue; */
+    display: flex;
+    width: 95%;
+    margin-top: 80px;
+    margin-left: 20px;
+    /* border: 1px solid blue; */
 }
+
 #box4 {
-  display: flex;
-  width: 95%;
-  margin-top: 80px;
-  margin-left: 20px;
-  /* border: 1px solid blue; */
+    display: flex;
+    width: 95%;
+    margin-top: 80px;
+    margin-left: 20px;
+    /* border: 1px solid blue; */
 }
+
 #trends {
-  margin: auto;
-  display: flex;
+    margin: auto;
+    display: flex;
 }
+
 .h1 {
-  margin-left: 30px;
-  font-size: 25px;
-  color: #454545;
+    margin-left: 30px;
+    font-size: 25px;
+    color: #454545;
 }
+
 #makeup {
-  margin-left: 330px;
+    margin-left: 330px;
 }
+
 .img1 {
-  /* border: 1px solid red; */
-  width: 80%;
-  height: 200px;
-  margin-left: 10px;
-  margin-top: 5px;
-  /* vertical-align: top; */
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 5px;
+    /* vertical-align: top; */
 }
+
 .img2 {
-  /* border: 1px solid red; */
-  width: 80%;
-  height: 200px;
-  margin-left: 10px;
-  margin-top: 5px;
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
+
 .img3 {
-  /* border: 1px solid red; */
-  width: 95%;
-  height: 200px;
-  margin-left: 10px;
-  margin-top: 5px;
+    /* border: 1px solid red; */
+    width: 95%;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
+
 .img4 {
-  /* border: 1px solid red; */
-  width: 95%;
-  height: 200px;
-  margin-left: 10px;
-  margin-top: 5px;
+    /* border: 1px solid red; */
+    width: 95%;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
+
 .box1 {
-  /* border: 1px solid blue; */
-  margin-left: 20px;
+    /* border: 1px solid blue; */
+    margin-left: 20px;
 }
 
 .box2 {
-  /* border: 1px solid blue; */
-  margin-left: 20px;
+    /* border: 1px solid blue; */
+    margin-left: 20px;
 }
+
 .box3 {
-  /* border: 1px solid blue; */
-  width: 32%;
-  margin-left: 20px;
+    /* border: 1px solid blue; */
+    width: 32%;
+    margin-left: 20px;
 }
+
 .box4 {
-  /* border: 1px solid blue; */
-  margin-left: 20px;
+    /* border: 1px solid blue; */
+    margin-left: 20px;
 }
+
 .para {
-  font-size: 12px;
-  margin-left: 10px;
+    font-size: 12px;
+    margin-left: 10px;
 }
+
 .heading {
-  margin-left: 10px;
-  font-size: 20px;
+    margin-left: 10px;
+    font-size: 20px;
 }
+
 button {
-  margin-left: 20px;
+    margin-left: 20px;
 }
+
 a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
+
 #photo1 {
-  width: 80%;
+    width: 80%;
 }
