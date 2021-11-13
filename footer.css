@@ -5,7 +5,7 @@
     background-color: whitesmoke;
 }
 
- #store-locator {
+#store-locator {
     display: inline-block;
     width: 48.5vw;
     height: 100%;
@@ -15,7 +15,8 @@
     padding-top: 20px;
     position: relative;
 }
-#store-locator a p{
+
+#store-locator a p {
     display: inline-block;
     max-width: 120px;
     color: black;
@@ -25,7 +26,8 @@
     margin-top: 5px;
     line-height: 25PX;
 }
-#store-locator a div{
+
+#store-locator a div {
     box-sizing: border-box;
     padding-top: 15px;
     display: inline-block;
@@ -39,8 +41,7 @@
     bottom: 33px;
     background-color: #fff;
     font-size: 20px;
-} 
-
+}
 
 #vl {
     border: 1px solid black;
@@ -48,7 +49,8 @@
     display: inline-block;
     width: 0vw;
     height: 80%;
-    margin: 10px auto;}
+    margin: 10px auto;
+}
 
 #get-in-touch {
     display: inline-block;
@@ -58,12 +60,13 @@
     position: relative;
     vertical-align: top;
     padding-left: 15vw;
-} 
-#get-in-touch a{
+}
+
+#get-in-touch a {
     text-decoration: none;
 }
-#context-div{
 
+#context-div {
     box-sizing: border-box;
     width: 300px;
     height: 100%;
@@ -74,7 +77,8 @@
     padding: 10px;
     /* padding-left: 40px; */
 }
-.contact-links{
+
+.contact-links {
     margin: 0px 10px;
     margin-top: 5px;
     display: inline-block;
@@ -83,14 +87,11 @@
     height: 50px;
     border-radius: 25px;
     vertical-align: top;
-    color: #7a1642 ;
+    color: #7a1642;
     box-sizing: border-box;
     padding: 10px;
     font-size: 20px;
 }
-
-
-
 
 .footer {
     width: 100%;
@@ -130,19 +131,22 @@
     height: 40px;
     width: 40px;
 }
-.social-media-logo{
+
+.social-media-logo {
     border-radius: 20px;
 }
-#fb-logo{
+
+#fb-logo {
     border: 2px solid rgb(54, 54, 209);
 }
-#insta-logo{
+
+#insta-logo {
     border: 2px solid rgb(158, 6, 145);
 }
-#youtube-logo{
+
+#youtube-logo {
     border: 2px solid red;
 }
-
 
 .social .img img {
     margin-top: 10px;
@@ -188,7 +192,7 @@
     margin-bottom: 20px;
 }
 
-#two ul{
+#two ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
