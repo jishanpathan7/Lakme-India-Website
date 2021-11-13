@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="lakmehome.css">
+    <link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/S/Salon_Ruj-logo-F9DD61D39F-seeklogo.com.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        #overview {
+            text-align: center;
+            padding: 30px;
+            font-size: 20px;
+            letter-spacing: .2em;
+            color: #454545;
+        }
+        
+        #container {
+            width: 90%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 5%;
+            margin: auto;
+            font-size: 13px;
+            text-align: center;
+        }
+        
+        h5 {
+            color: rgb(216, 90, 195);
+            padding: 10px;
+            /* margin-left: 70px; */
+        }
+        /* p{ text-align: left; } pre{ margin-left: 50px; } */
+        
+        .button {
+            width: 43%;
+            padding: 10px;
+            height: 50px;
+            cursor: pointer;
+            border: 1px solid black;
+            font-weight: bold;
+            background: transparent;
+            cursor: pointer;
+            margin-top: 35px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: black;
+        }
+        
+        .button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="img">
+                <a href="lakmehome.html"><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="lakmehome.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="#">TRENDING NOW</a>
+                </li>
+
+                <li>
+                    <a href="VirtualTry.html">MAKEUP</a>
+                </li>
+
+                <li>
+                    <a href="sale.html">SALE</a>
+                </li>
+
+                <li>
+                    <a href="#">TRENDS</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/ILoveLakme">GET THE LOOK</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lakmeindia/">JOIN THE CLUB</a>
+                </li>
+                <li>
+                    <a href="#">MORE</a>
+                </li>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <a href="#"><img src="wishlist.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="user.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="search.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="shopping-bag.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="overview">
+        <p>TOP SELLER</p>
+        <hr>
+        <br>
+        <br>
+        <hr>
+    </div>
+</body>
+
+</html>
+<script>
+    var data = [{
+            type1: "₹ 450   ₹ 500   10 % OFF",
+            type2: "LAKMÉ FOREVER MATTE LIQUID LIP COLOR",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24544_S5-8901030758850_47d81970-d9f4-480a-9ad0-2182d5a263f5_300x.jpg?v=1591863174",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Lakme9to5Primer_MatteLipColorRedLetter_300x.jpg?v=1598243140",
+        }, {
+            type1: "₹ 352   ₹ 475   26 % OFF",
+            type2: "LAKMÉ 9 TO 5 PRIMER" +
+                "MATTE PERFECT COVER FOUNDATION",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24451_S2-8901030742439_300x.jpg?v=1611755998",
+
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24544_H-8901030758850_3e09b888-1276-44a2-9665-fa293cbd5d3_300x.jpg?v=1601470864",
+        }, {
+            type1: "₹ 300   ₹ 500   40% OFF",
+            type2: "LAKMÉ BLUSH AND GLOW SHEET MASK VALUE SET",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/27148_S9-8901030741845_300x.jpg?v=1615290711",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Hero_Bundle_2_300x.jpg?v=1631012588",
+
+        },
+
+        {
+            type1: "₹ 450   ₹ 500   10 % OFF",
+            type2: "LAKMÉ FOREVER MATTE LIQUID LIP COLOR",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/ColorCrush_1_300x.jpg?v=1617179688",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/ColorCrush_Hero_1_300x.jpg?v=1617249209",
+        }, {
+            type1: "₹ 352   ₹ 475   26 % OFF",
+            type2: "LAKMÉ 9 TO 5 PRIMER + MATTE PERFECT COVER FOUNDATION",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Gel_1_300x.jpg?v=1617179562",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Gel-stylist_1024x1024_07302dc1-be39-41e9-a4be-02365e58409b_300x.jpg?v=1613555160",
+        }, {
+            type1: "₹ 300   ₹ 500   40% OFF",
+            type2: "LAKMÉ BLUSH AND GLOW SHEET MASK VALUE SET",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Lips_300x.jpg?v=1615885750",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/2021-09-08-at-14_300x.jpg?v=1631190757",
+
+        }, {
+            type1: "₹ 450   ₹ 500   10 % OFF",
+            type2: "LAKMÉ FOREVER MATTE LIQUID LIP COLOR",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/2_P_M_1_300x.jpg?v=1618037780",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/img_1_300x.jpg?v=1618223687",
+        }, {
+            type1: "₹ 352   ₹ 475   26 % OFF",
+            type2: "LAKMÉ 9 TO 5 PRIMER + MATTE PERFECT COVER FOUNDATION",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/2_Nick_Swatch1_300x.jpg?v=1617876478",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/imgg_300x.jpg?v=1617795895",
+        }, {
+            type1: "₹ 300   ₹ 500   40% OFF",
+            type2: "LAKMÉ BLUSH AND GLOW SHEET MASK VALUE SET",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24552_S6-8901030759253_8c2a3bf4-f302-421c-92a2-684a41622c03_300x.jpg?v=1611123658",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/pro-and-band_300x.jpg?v=1612276985",
+
+        },
+
+        {
+            type1: "₹ 450   ₹ 500   10 % OFF",
+            type2: "LAKMÉ FOREVER MATTE LIQUID LIP COLOR",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Cushion_1_300x.jpg?v=1617179768",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/buy-3-at-699_300x.jpg?v=1627301379",
+        }, {
+            type1: "₹ 352   ₹ 475   26 % OFF",
+            type2: "LAKMÉ 9 TO 5 PRIMER + MATTE PERFECT COVER FOUNDATION",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/P_M_1_7b27653e-cce8-4bec-a42a-650009329953_300x.jpg?v=1617955193",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/P_M_swtach-lipstick_300x.jpg?v=1619008632",
+        }, {
+            type1: "₹ 300   ₹ 500   40% OFF",
+            type2: "LAKMÉ BLUSH AND GLOW SHEET MASK VALUE SET",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24968_H2-8901030816055_300x.jpg?v=1621002851",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Redrust_300x.jpg?v=1598526705",
+
+        },
+
+
+
+
+        {
+            type1: "₹ 450   ₹ 500   10 % OFF",
+            type2: "LAKMÉ FOREVER MATTE LIQUID LIP COLOR",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/2_2980d219-7dd2-4ef3-b83c-c3c94ca07b0e_300x.jpg?v=1599200805",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/LakmeAbsoluteMatteUltimateLipColorwithArganOilPetalPink_41b560b6-3f0d-47b2-bfd5-075cf7bc0934_300x.jpg?v=1599200805",
+        }, {
+            type1: "₹ 352   ₹ 475   26 % OFF",
+            type2: "LAKMÉ 9 TO 5 PRIMER + MATTE PERFECT COVER FOUNDATION",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/23128_S4_140159fc-604d-47c1-a18a-27f7a2a74ed4_300x.jpg?v=1589782986",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/Blackjack_300x.png?v=1598528925",
+        }, {
+            type1: "₹ 300   ₹ 500   40% OFF",
+            type2: "LAKMÉ BLUSH AND GLOW SHEET MASK VALUE SET",
+            type: "BEST SELLER",
+            hover_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/24487_H1_19e0a513-6473-46e5-9fd4-db1ee8030429_300x.jpg?v=1589783464",
+            image_url: "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/M1_300x.jpg?v=1601551574",
+
+        },
+    ]
+
+    function newProducts(data) {
+        data.map(function(item, index) {
+            var imageDiv = document.createElement("div");
+            var img = document.createElement("img");
+            img.setAttribute("src", item.image_url);
+
+            function leave() {
+                img.setAttribute("src", item.hover_url);
+            }
+
+            function enter() {
+                img.setAttribute("src", item.image_url);
+            }
+
+            img.addEventListener("mouseenter", leave);
+            img.addEventListener("mouseleave", enter);
+
+            var h5 = document.createElement("h5");
+            h5.textContent = item.type;
+
+            var pre = document.createElement("pre");
+            pre.textContent = item.type1;
+
+            var p = document.createElement("p");
+            p.textContent = item.type2;
+
+            var br = document.createElement("br");
+            br.linebreak = true;
+
+            var br1 = document.createElement("br");
+            br1.linebreak = true;
+
+
+            var br2 = document.createElement("br");
+            br2.linebreak = true;
+
+
+
+            var btn = document.createElement("button");
+            btn.setAttribute("class", "button");
+            btn.textContent = "VIEW SHADES";
+            btn.onclick = function() {
+                productDetails(p)
+            }
+
+            if ((index % 3) != 1) {
+                imageDiv.append(img, h5, p, pre, br, br1, br2, btn);
+            } else {
+                btn.style.padding = 0;
+                imageDiv.append(img, h5, p, pre, br, br1, btn);
+
+            }
+            mainDiv.append(imageDiv);
+
+        });
+    }
+    var body = document.querySelector("body");
+    var mainDiv = document.createElement("div");
+    mainDiv.setAttribute("id", "container");
+    body.append(mainDiv);
+    newProducts(data);
+
+    if (localStorage.getItem("productDetails") == null) {
+        localStorage.setItem("productDetails", JSON.stringify([]));
+    }
+
+    //Local Storage Data Access function
+
+    function productDetails(p) {
+        var productPage = JSON.parse(localStorage.getItem("productDetails"));
+        productPage = [];
+        productPage.push(p);
+        localStorage.setItem("productDetails", JSON.stringify(productPage));
+        window.location.href = "Product_Descrip.html";
+    }
+</script>
