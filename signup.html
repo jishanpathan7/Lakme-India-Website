@@ -5,235 +5,227 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="signup.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
-    <script src="https://kit.fontawesome.com/7ea2aa966e.js" crossorigin="anonymous"></script>
+    <title>Sign-up page</title>
+
+
+    <style>
+        body {
+            margin: 0%;
+        }
+        
+        #n,
+        #e,
+        #m,
+        #p {
+            width: 94%;
+            height: 40px;
+            margin: 7px;
+        }
+        
+        #submit {
+            text-align: center;
+            margin: 20px 2px;
+            height: 60px;
+            width: 30%;
+            border: none;
+            border-radius: 4px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            box-shadow: 10px 5px 5px grey;
+        }
+        
+        #submit:hover {
+            cursor: pointer;
+        }
+        
+        .inputBoxDesign {
+            border: 1px solid black;
+            font-size: 16px;
+            padding: 3px 10px;
+        }
+        
+        .mainBox {
+            max-width: 50%;
+            margin: auto;
+            height: 100%;
+            padding: 4px;
+        }
+        
+        .red {
+            color: red;
+        }
+        
+        @media(max-width:960px) {
+            .mainBox {
+                max-width: 80%;
+            }
+            #topHeader>div {
+                display: none;
+            }
+        }
+        
+        @media(max-width:600px) {
+            .mainBox {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="navbar" id="navbar">
-        <header id="header">
-            <div id="logo">
-                <img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"
-                    alt="">
-            </div>
-            <div id="navs">
-                <ul>
-                    <li>
-                        <a href="#">HOME</a>
-                    </li>
-                    <li>
-                        <a href="#">MAKEUP</a>
-                    </li>
-                    <li>
-                        <a href="#">SKIN</a>
-                    </li>
-                    <li>
-                        <a href="#">TRENDING NOW</a>
-                    </li>
-                    <li>
-                        <a href="#">SALE</a>
-                    </li>
-                    <li>
-                        <a href="#">FIND YOUR MATCH</a>
-                    </li>
-                    <li>
-                        <a href="#">MORE</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="icons">
-                <a href="#"><i class="far fa-heart"></i></a>
-                <a href="login.html"><i class="far fa-user"></i></a>
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-        </header>
-    </div>
-    <div id="box1">
-        <p id="heading">REGISTER</p>
-        <p>Please fill in the information below</p>
 
+    <h1>CREATE YOUR ACCOUNT</h1>
+    <p>Sign up now and get 15% off your first order.</p>
+    <form id="myform" onsubmit="signup(event)">
+        <table>
+            <input type="text" id="n" class="inputBoxDesign" placeholder="enter your name" required>
+            <span id="username" class="red"></span>
 
-        <div id="facebook" class="media">
-            <abbr title="Use Facebook">
-                <a id="fblogin" href="">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/900px-Facebook_Logo_%282019%29.png"
-                        alt="FB logo" height="80%">
-                    <span>Use Facebook</span>
+            <input type="text" id="e" class="inputBoxDesign" placeholder="enter your email *" required>
+            <span id="email" class="red"></span>
 
-                </a>
-            </abbr>
+            <input type="number" id="m" class="inputBoxDesign" placeholder="mobile *">
+            <span id="mobile" class="red"></span>
 
-        </div>
+            <input type="password" id="p" class="inputBoxDesign" placeholder="enter your password *" required>
+            <span id="password" class="red"></span>
 
-        <div id="google" class="media">
-            <abbr title="Use Google">
-                <a id="Glogin" href="">
-                    <i id="google_logo" class="fab fa-google"></i>
-                    <span>Use Google</span>
-                </a>
-            </abbr>
-
-        </div>
-
-
-    </div>
-    <div id="box2">
-        <form id="form" action="">
-            <input class="fillups" type="text" id="firstname" placeholder="First name">
-            <input class="fillups" type="text" id="lastname" placeholder="last name">
-            <input class="fillups" type="email" id="email" placeholder="Email">
-            <input class="fillups" type="password" id="password" placeholder="Password">
-            <button id="button" type="button"><span></span>CREATE MY ACCOUNT </button>
-            
-        </form>
+            <input type="submit" value="REGISTER &emsp; &#8594;" id="submit" name="submit" />
+        </table>
+    </form>
     </div>
 
-    <hr color="black">
+
+    <script type="text/javascript">
+        function signup(e) {
+            e.preventDefault();
+
+            let myform = document.getElementById("myform");
+            let name = myform.n.value;
+            let email = myform.e.value;
+            let mobile = myform.m.value;
+            let password = myform.p.value;
+            //console.log("data:", name, email, password);
+            var correctchar = /^[A-Za-z]+$/;
+
+            //  var indexwithat = email.indexOf("@");
+            // var indexwithdott = email.lastIndexOf(".");
+            if (name.length < 3) {
+                alert("Please enter your name correctly");
+            } else if (!name.match(correctchar)) {
+                alert("Please enter correct name");
+            } else if (email.search(/[@]/) == -1) {
+                alert("Email id contain @ character");
 
 
-    <!-- UPPER FOOTER-->
-    <div class="upper-footer">
-        <div id="store-locator">
-            <a href="#">
-                <p>STORE LOCATOR</p> 
-                <div>
-                    <i class="fas fa-map-marker-alt"></i> 
-                </div>
-                  
-            </a>
-        
-    
-        </div>
-        <div id="vl">
-    
-        </div>
-        <div id="get-in-touch">
-            <a href="#">
-                <div id="context-div">
-                    <p>GET IN TOUCH</p>
-                    <div class="contact-links" >
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-links" >
-                        <i class="fas fa-comment-alt"></i>
-                    </div>
-                    <div class="contact-links" >
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
 
-    <!-- LOWER FOOTER -->
-    <footer class="footer">
-        <div class="div1">
-            <div class="social">
-                <div class="img">
-                    <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
-                </div>
-                <p>FOLLOW LATEST UPDATES & NEW LAUNCHES</p>
+            } else if (email.indexOf('@') <= 0) {
+                alert("invalid @ position");
 
-                <a href="https://www.facebook.com/lakme" target="_blank"><img  id="fb-logo" class="social-media-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQcAP10b_fOQmVYPKGqaiap7dyBvTOrZ0IsQ&usqp=CAU"></a>
-                <a  href="https://www.instagram.com/lakmeindia/" target="_blank"><img id="insta-logo" class="social-media-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhl9Y2f5q_zijV7chKi_F9vsOtapkf5hTwKA&usqp=CAU"></a>
-                <a  href="https://www.youtube.com/user/ILoveLakme" target="_blank"><img id="youtube-logo" class="social-media-logo" src="https://w7.pngwing.com/pngs/936/468/png-transparent-youtube-logo-youtube-logo-computer-icons-subscribe-angle-rectangle-airplane.png"></a>
-                
-            </div>
-            <div class="div2">
-                <div id="one">
-                    <div>
-                        <h4>CONTACT US</h4>
-                        <br> support@lakmeindia.com
-                        <br> 1800-313-9293<br>Mon- Sat, am to 7 pm
-                    </div>
-                    <div>
-                        <br>
-                        <h4>ABOUT US</h3>
-                            <p>
-                                The contemporary Indian beauty expert - Lakmé continuously innovates to offer a wide range of high performance and world class cosmetics and skincare products that have earned recognition from the People for the Ethical Treatment of Animals (PETA). We,
-                                at Lakme, combine international cosmetic technology with an in-depth understanding of the Indian woman’s needs and offer a comprehensive beauty experience to our customers through products that are ideal for a variety of
-                                Indian skin tones. Lakmé was the country's first cosmetic brand to introduce makeup to Indian women and takes pride in being the expert on Indian Beauty for over 50 years. We also take immense pride in being a compassionate
-                                beauty brand which is why we do not believe in or support testing on animals. Our bond with beauty and fashion goes beyond skincare & makeup hence it is manifested through the renowned Lakmé Fashion Week, which is now the
-                                largest fashion event of its kind in the country that celebrates the beauty of fashion.
-                            </p>
-                    </div>
-                </div>
-                <div id="two">
-                    <h3>HELP</h3>
-                    <ul>
-                        <li>
+            } else if (email.search(/[.]/) == -1) {
+                alert("Email id contain . character");
 
-                            <a href="https://api.whatsapp.com/send/?phone=919137630020">Beauty Consultation</a>
-                        </li>
-                        <li>
-                            <!-- <a href="#">FAQ</a> -->
-                            <a href="FAQ.html">FAQ</a>
-                        </li>
-                        <li>
-                            <!-- <a href="#">Contact Us</a> -->
-                            <a href="tel:1800-313-9293">Contact Us</a>
-                        </li>
-                        <li>
-                            <!-- <a href="#">Track Order</a> -->
-                            <a href="lakmehome.html ">Track Order</a>
-                        </li>
 
-                        <li>
-                            <!-- <a href="#">Shipping</a> -->
-                            <a href="lakmehome.html ">Shipping</a>
-                        </li>
-                        <li>
-                            <!-- <a href="#">Terms &amp; Conditions</a> -->
-                            <a href="terms.html">Terms &amp; Conditions</a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="three">
-                <div id="three ">
-                    <h2>Need Help?</h2>
-                    <div>
-                        <p>Email Us:<br>support@lakmeindia.com</p>
-                        <br>
-                        <p>Call Us:<br>1800-313-9293</p>
-                        <br>
-                        <p>Working Timing:<br>Mon - Sat , 9 am to 7 pm</p>
 
-                    </div>
-                </div>
+            } else if (email.charAt(email.length - 4) != '.') {
+                alert("invalid dott(.) position in email");
 
-            </div>
-            <div class="lastline">
-            <div class="lastline ">
-                <hr> </div>
-    </footer>
+            } else if (mobile.length != 10) {
+                alert("enter 10 digit mobile numbers");
+
+
+
+            } else if (password.length < 8) {
+                alert("enter 8 length of password ");
+
+
+
+            } else if (password.search(/[0-9]/) == -1) {
+                alert("password contain alteast one number");
+
+
+
+            } else if (password.search(/[a-z]/) == -1) {
+                alert("password contain alteast one lower case character");
+
+
+
+            } else if (password.search(/[A-Z]/) == -1) {
+                alert("password contain alteast one UPPER CASE case character");
+
+
+
+            } else if (password.search(/[!\@\#\%\^\&\(\)\_\+\.\,\:\;]/) == -1) {
+                alert("password contain alteast one special character");
+
+
+
+            } else {
+                if (localStorage.getItem('users') === null) {
+
+                    localStorage.setItem("users", JSON.stringify([]))
+                }
+                var user = {
+                    name,
+                    email,
+                    mobile,
+                    password
+                };
+                let arr = JSON.parse(localStorage.getItem("users"));
+                arr.push(user);
+                localStorage.setItem("users", JSON.stringify(arr));
+                // window.location.href = "adidas_checkOutPage.html";
+                alert("Registered successfully");
+                window.location.href = "adidas_checkOutPage.html";
+                // window.location.href = "shippinglogin.html";
+                document.getElementById("n").value = "";
+                document.getElementById("e").value = "";
+                document.getElementById("m").value = "";
+                document.getElementById("p").value = "";
+            }
+        }
+
+
+        //Top Header slide show function
+        function topHeaderSlideShow() {
+
+            let topHeader = document.getElementById("topHeader");
+
+            let arrayLines = [
+                "FREE DELIVERY FOR ALL ORDERS NOW",
+                "FREE RETURNS",
+                "SIGN UP & GET 15% OFF"
+            ];
+
+            let x = window.matchMedia("(max-width: 960px)")
+
+            function showTextInHeader(x) {
+
+                if (x.matches) {
+
+                    let p = document.createElement("p");
+                    p.textContent = arrayLines[0];
+                    p.setAttribute("class", "hearderSlideContent");
+                    topHeader.append(p);
+                    let c = 0;
+
+                    setInterval(function() {
+                        if (c == arrayLines.length) {
+                            c = 0;
+                        }
+                        p.textContent = arrayLines[c];
+                        c++;
+
+                    }, 3000);
+                }
+            }
+            showTextInHeader(x)
+            x.addListener(showTextInHeader)
+        }
+        topHeaderSlideShow();
+    </script>
+
 </body>
 
 </html>
-
-<script>
-
-document.getElementById("form").addEventListener("click", addUserData);
-var  usersData = JSON.parse(localStorage.getItem(usersData)) || [];
-
-function addUserData(e){
-    e.preventDefault();
-    var userData = {
-        firstName : form.firstname.value,
-        lastName : form.lastname.value,
-        email : form.email.value,
-        password : form.password.value,
-    }
-    usersData.push(userData);
-    localStorage.setItem("UsersData", JSON.stringify(usersData));
-}
-
-
-
-</script>
