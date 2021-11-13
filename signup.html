@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up page</title>
+    <link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/S/Salon_Ruj-logo-F9DD61D39F-seeklogo.com.png">
+    <link rel="stylesheet" href="lakmehome.css">
+    <style>
+        #n,
+        #e,
+        #m,
+        #p {
+            width: 70%;
+            height: 40px;
+            margin: 7px;
+        }
+        
+        #submit {
+            text-align: center;
+            margin-left: 20px;
+            margin: 20px 2px;
+            height: 60px;
+            width: 30%;
+            border: none;
+            border-radius: 4px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            box-shadow: 10px 5px 5px grey;
+        }
+        
+        #submit:hover {
+            cursor: pointer;
+        }
+        
+        .inputBoxDesign {
+            border: 1px solid black;
+            font-size: 16px;
+            padding: 3px 10px;
+        }
+        
+        .mainBox {
+            max-width: 50%;
+            margin: auto;
+            height: 100%;
+            padding: 4px;
+        }
+        
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar page Start -->
+    <div class="banner">
+        <div class="navbar">
+            <div class="img">
+                <a href="lakmehome.html"><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="lakmehome.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="product_page.html">TRENDING NOW</a>
+                </li>
+
+                <li>
+                    <a href="Virtual_tryon.html">MAKEUP</a>
+                </li>
+
+                <li>
+                    <a href="sale.html">SALES</a>
+
+                </li>
+                <li>
+                    <a href="Try_on_looks.html">SKIN CARE</a>
+                </li>
+                <li>
+                    <a href="Virtual_tryon.html">FIND YOUR MATCH</a>
+                </li>
+                <li>
+                    <a href="trends.html">TRENDS</a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/user/ILoveLakme" target="_blank">GET THE LOOK</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lakmeindia/" target="_blank">JOIN THE CLUB</a>
+                </li>
+                <li>
+                    <a href="Makeup.html">MORE</a>
+                </li>
+            </ul>
+            <ul class="icons">
+                <li>
+                    <a href="my_wishlist.html"><img src="wishlist.png"></a>
+                </li>
+                <li>
+                    <a href="signup.html"><img src="user.png"></a>
+                </li>
+                <li>
+                    <a href="lakmehome.html"><img src="search.png"></a>
+                </li>
+                <li>
+                    <a href="cart_project.html"><img src="shopping-bag.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Navbar page END -->
+
+
+
+    <div class="mainBox">
+        <h1>CREATE YOUR ACCOUNT</h1>
+
+        <form id="myform" onsubmit="signup(event)">
+            <table>
+                <input type="text" id="n" class="inputBoxDesign" placeholder="enter your name" required>
+                <span id="username" class="red"></span>
+
+                <input type="text" id="e" class="inputBoxDesign" placeholder="enter your email *" required>
+                <span id="email" class="red"></span>
+
+                <input type="number" id="m" class="inputBoxDesign" placeholder="mobile *">
+                <span id="mobile" class="red"></span>
+
+                <input type="password" id="p" class="inputBoxDesign" placeholder="enter your password *" required>
+                <span id="password" class="red"></span>
+
+                <input type="submit" value="CREATE YOUR ACCOUNT" id="submit" name="submit" />
+            </table>
+        </form>
+    </div>
+
+    <!-- Location and Contact Bar Start -->
+    <div class="box2">
+        <div>
+            <h3>STORE LOCATOR</h3>
+            <br><br>
+            <a href="#"><img src="location icon.png"></a>
+        </div>
+        <div id="line"></div>
+        <div>
+            <h3>GET IN TOUCH</h3>
+
+            <a href="tel:1800-313-9293" target="_blank"><img src="telephone.png">Call</a>
+            <a href="https://api.whatsapp.com/send/?phone=919137630020" target="_blank"><img src="comment.png">Chat</a>
+            <a href="support@lakmeindia.com" target="_blank"><img src="email.png">Email</a>
+        </div>
+    </div>
+    <!-- Location and Contact Bar End -->
+
+
+    <!-- START FOOTER DIV -->
+    <footer class="footer">
+        <div class="div1">
+            <div class="social">
+                <div class="img">
+                    <a><img src="https://cdn.shopify.com/s/files/1/0014/3514/0183/files/logo_37106f0a-2cdf-4ed0-9a97-33ad520b6682_155x.png?v=1599222024"></a>
+                </div>
+                <p>FOLLOW LATEST UPDATES & NEW LAUNCHES</p>
+
+                <a href="https://www.facebook.com/lakme" target="_blank"><img src="facebook.png"></a>
+                <a href="https://www.instagram.com/lakmeindia/" target="_blank"><img src="instagram.png"></a>
+                <a href="https://www.youtube.com/user/ILoveLakme" target="_blank"><img src="youtube.png"></a>
+
+            </div>
+            <div class="div2">
+                <div id="one">
+                    <div>
+                        <h4>CONTACT US</h4>
+                        <br> support@lakmeindia.com
+                        <br> 1800-313-9293<br>Mon- Sat, am to 7 pm
+                    </div>
+                    <div>
+                        <br>
+                        <h4>ABOUT US</h3>
+                            <p>
+                                The contemporary Indian beauty expert - Lakmé continuously innovates to offer a wide range of high performance and world class cosmetics and skincare products that have earned recognition from the People for the Ethical Treatment of Animals (PETA). We,
+                                at Lakme, combine international cosmetic technology with an in-depth understanding of the Indian woman’s needs and offer a comprehensive beauty experience to our customers through products that are ideal for a variety of
+                                Indian skin tones. Lakmé was the country's first cosmetic brand to introduce makeup to Indian women and takes pride in being the expert on Indian Beauty for over 50 years. We also take immense pride in being a compassionate
+                                beauty brand which is why we do not believe in or support testing on animals. Our bond with beauty and fashion goes beyond skincare & makeup hence it is manifested through the renowned Lakmé Fashion Week, which is now the
+                                largest fashion event of its kind in the country that celebrates the beauty of fashion.
+                            </p>
+                    </div>
+                </div>
+                <div id="two">
+                    <h3>HELP</h3>
+                    <ul>
+                        <li>
+
+                            <a href="https://api.whatsapp.com/send/?phone=919137630020">Beauty Consultation</a>
+                        </li>
+                        <li>
+                            <a href="FAQ.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="tel:1800-313-9293">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="lakmehome.html ">Track Order</a>
+                        </li>
+
+                        <li>
+                            <a href="lakmehome.html ">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="terms.html">Terms &amp; Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="three ">
+                    <h2>Need Help?</h2>
+                    <div>
+                        <p>Email Us:<br>support@lakmeindia.com</p>
+                        <br>
+                        <p>Call Us:<br>1800-313-9293</p>
+                        <br>
+                        <p>Working Timing:<br>Mon - Sat , 9 am to 7 pm</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="lastline ">
+                <hr> </div>
+    </footer>
+
+    <script type="text/javascript">
+        function signup(e) {
+            e.preventDefault();
+
+            let myform = document.getElementById("myform");
+            let name = myform.n.value;
+            let email = myform.e.value;
+            let mobile = myform.m.value;
+            let password = myform.p.value;
+
+            if (name.length < 3) {
+                alert("Please enter your name correctly");
+            } else if (email.search(/[@]/) == -1) {
+                alert("Email id contain @ character");
+
+
+
+            } else if (email.indexOf('@') <= 0) {
+                alert("invalid @ position");
+
+            } else if (email.search(/[.]/) == -1) {
+                alert("Email id contain . character");
+
+
+
+            } else if (email.charAt(email.length - 4) != '.') {
+                alert("invalid dott(.) position in email");
+
+            } else if (mobile.length != 10) {
+                alert("enter 10 digit mobile numbers");
+
+
+
+            } else if (password.length < 8) {
+                alert("enter 8 length of password ");
+
+
+
+            } else if (password.search(/[0-9]/) == -1) {
+                alert("password contain alteast one number");
+
+
+
+            } else if (password.search(/[a-z]/) == -1) {
+                alert("password contain alteast one lower case character");
+
+
+
+            } else if (password.search(/[A-Z]/) == -1) {
+                alert("password contain alteast one UPPER CASE case character");
+
+
+
+            } else if (password.search(/[!\@\#\%\^\&\(\)\_\+\.\,\:\;]/) == -1) {
+                alert("password contain alteast one special character");
+
+
+
+            } else {
+                if (localStorage.getItem('users') === null) {
+
+                    localStorage.setItem("users", JSON.stringify([]))
+                }
+                var user = {
+                    name,
+                    email,
+                    mobile,
+                    password
+                };
+                let arr = JSON.parse(localStorage.getItem("users"));
+                arr.push(user);
+                localStorage.setItem("users", JSON.stringify(arr));
+                // window.location.href = "adidas_checkOutPage.html";
+                alert("Registered successfully");
+                window.location.href = "login.html";
+                // window.location.href = "shippinglogin.html";
+                document.getElementById("n").value = "";
+                document.getElementById("e").value = "";
+                document.getElementById("m").value = "";
+                document.getElementById("p").value = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

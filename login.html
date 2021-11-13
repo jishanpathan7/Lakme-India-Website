@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/S/Salon_Ruj-logo-F9DD61D39F-seeklogo.com.png">
+    <link rel="stylesheet" href="lakmehome.css">
+</head>
+<style>
+    #el,
+    #pass {
+        width: 56%;
+        height: 40px;
+        margin: 20px;
+        padding-left: 10px;
+    }
+    
+    #rev {
+        width: 20%;
+        margin-top: 40px;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: rgb(87, 78, 78);
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+        font-style: normal;
+    }
+    
+    #login {
+        width: 45%;
+        height: 400px;
+        margin-left: 30%;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(216, 209, 209);
+    }
+    
+    .heading {
+        font-size: 30px;
+        font-weight: 700;
+        margin-left: 5%;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    
+    #email {
+        width: 58%;
+        height: 44px;
+        margin-left: 5%;
+    }
+    
+    #password {
+        margin-top: 30px;
+        width: 58%;
+        height: 44px;
+        margin-left: 5%;
+    }
+    
+    #submit {
+        text-align: center;
+        margin: 20px 20px;
+        height: 60px;
+        width: 88%;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(73, 67, 67);
+        color: white;
+        font-size: 18px;
+    }
+    
+    #submit:hover {
+        cursor: pointer;
+    }
+    
+    #log {
+        width: 20%;
+        margin-left: 3%;
+        margin-top: 40px;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+        font-style: normal;
+    }
+</style>
+
+<body>
+    <div id="login">
+        <span id="checklogin" style="color: black;"></span>
+        <div class="heading">LOG IN</div>
+        <form onsubmit="signinfun(event)" id="myform" action="">
+            <span id="rename" style="color: rgb(255, 255, 255);"></span>
+            <input type="email" id="el" placeholder="Email">
+            <input type="password" id="pass" placeholder="Password">
+
+            <div> <input type="submit" value="LOG IN" id="log" /></div>
+
+        </form>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    function signinfun(e) {
+        e.preventDefault();
+        // let checklogin = document.getElementById("check");
+        let myform = document.getElementById("myform");
+        let email = myform.el.value;
+        let password = myform.pass.value;
+        //console.log("data:", name, email, password);
+        let all_users = JSON.parse(localStorage.getItem("users"));
+
+
+
+        var count = 0;
+        for (i = 0; i < all_users.length; i++) {
+            if (email === all_users[i].email && password === all_users[i].password) {
+                alert("Login successful");
+                document.getElementById("checklogin").textContent = "YOU ARE LOGGED IN";
+                window.location.href = "lakmehome.html"
+                document.getElementById("rename").innerHTML = "";
+                var newname = document.getElementById("el");
+                newname.setAttribute("disabled", true);
+                var newpass = document.getElementById("pass");
+                newpass.setAttribute("disabled", true);
+                break;
+
+
+            } else {
+                count++;
+
+            }
+        }
+    }
+</script>
