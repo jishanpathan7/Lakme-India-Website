@@ -9,6 +9,95 @@
     <link rel="icon" type="image/x-icon" href="https://seeklogo.com/images/S/Salon_Ruj-logo-F9DD61D39F-seeklogo.com.png">
     <link rel="stylesheet" href="lakmehome.css">
 </head>
+<style>
+    #rev {
+        width: 20%;
+        margin-left: 2%;
+        margin-top: 40px;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: rgb(87, 78, 78);
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+        font-style: normal;
+    }
+    
+    #right {
+        width: 40%;
+        height: 1000px;
+        margin-top: 20px;
+        /* border: 1px solid blue; */
+    }
+    
+    #el,
+    #pass {
+        width: 46%;
+        height: 40px;
+        margin: 20px;
+    }
+    
+    #login {
+        width: 65%;
+        height: 400px;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(216, 209, 209);
+    }
+    
+    .heading {
+        font-size: 30px;
+        font-weight: 700;
+        margin-left: 5%;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    
+    #email {
+        width: 88%;
+        height: 44px;
+        margin-left: 5%;
+    }
+    
+    #password {
+        margin-top: 30px;
+        width: 88%;
+        height: 44px;
+        margin-left: 5%;
+    }
+    
+    #submit {
+        text-align: center;
+        margin: 20px 20px;
+        height: 60px;
+        width: 88%;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(73, 67, 67);
+        color: white;
+        font-size: 18px;
+    }
+    
+    #submit:hover {
+        cursor: pointer;
+    }
+    
+    #log {
+        width: 20%;
+        margin-left: 6%;
+        margin-top: 40px;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: rgb(15, 7, 7);
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+        font-style: normal;
+    }
+</style>
 
 <body>
     <!-- Navbar page Start -->
@@ -89,9 +178,6 @@
 
 </html>
 <script>
-    var signinbtn = document.getElementById("signinbtn");
-    signinbtn.addEventListener("click", signin);
-
     function signin() {
         alert("Please login below");
         // document.getElementById("rename").innerHTML = "** please login here **";
@@ -120,11 +206,7 @@
                 alert("Login successful");
                 document.getElementById("checklogin").textContent = "YOU ARE LOGGED IN";
                 document.getElementById("rename").innerHTML = "";
-                var newname = document.getElementById("el");
-                newname.setAttribute("disabled", true);
-                var newpass = document.getElementById("pass");
-                newpass.setAttribute("disabled", true);
-                break;
+
 
 
             } else {
@@ -133,4 +215,5 @@
             }
         }
     }
+    window.location.href = "lakmehome.html"
 </script>
