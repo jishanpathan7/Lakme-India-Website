@@ -60,7 +60,12 @@ Here customers can find beauty products of their need and buy them. </h3>
   <li>LinkedIn: <a href="https://www.linkedin.com/in/jishan-pathan-5b398b198/">https://www.linkedin.com/in/jishan-pathan-5b398b198/ </a></li>
 </ul>
 
-<br>
+<br><h3>Saurabh Kumar Singh</h3>
+<ul>
+  <li>Github: <a href= "https://github.com/100rbrajpuT" >100rbrajpuT</a></li>
+  <li>Email:  singhsaurabh9451985554@gmail.com  </li>
+  <li>LinkedIn: <a href="www.linkedin.com/in/saurabh-kr-singh-100">www.linkedin.com/in/saurabh-kr-singh-100</a></li>
+</ul>
 
 <h3>Mohit Gupta</h3>
 <ul>
